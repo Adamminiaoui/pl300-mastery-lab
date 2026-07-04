@@ -47,6 +47,7 @@ components/
 data/
   questions.json
   validation-report.json
+  question-audit-report.json
 lib/
 public/
   question-assets/
@@ -83,7 +84,8 @@ Open `http://localhost:3000`.
 3. Regenerates `data/questions.json`
 4. Regenerates `public/question-assets/`
 5. Runs validation and writes `data/validation-report.json`
-6. Prints:
+6. Runs the per-question audit and writes `data/question-audit-report.json`
+7. Prints:
    - total questions extracted
    - questions missing answers
    - questions missing explanations
@@ -94,9 +96,9 @@ Latest generated validation summary:
 - Total questions extracted: `301`
 - Questions missing answers: `0`
 - Questions missing explanations: `0`
-- Questions requiring manual review: `24`
+- Questions requiring manual review: `17`
 
-The remaining manual-review items are mostly image-recovered hotspot/dropdown answers and case-study-heavy questions.
+The remaining manual-review items are image-recovered answer areas that are structurally valid but still worth a human spot-check.
 
 ## Replace the PDF
 
@@ -159,6 +161,12 @@ Run it manually with:
 
 ```bash
 npm run validate-questions
+```
+
+Run the detailed per-question platform audit with:
+
+```bash
+npm run audit-questions
 ```
 
 ## Notes

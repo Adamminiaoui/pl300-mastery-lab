@@ -32,6 +32,7 @@ interface QuizStoreState {
   moveQuestion: (mode: SessionMode, delta: number) => void;
   saveResponse: (mode: SessionMode, questionId: number, response: QuestionResponse) => void;
   toggleMarked: (mode: SessionMode, questionId: number) => void;
+  recordQuestionOutcome: (questionId: number, correct: boolean) => void;
   revealPracticeAnswer: (questionId: number) => QuestionResponse | undefined;
   submitSession: (mode: "exam" | "mock") => SessionResult | undefined;
   setTimeRemaining: (mode: "exam" | "mock", nextValue: number) => void;
@@ -249,6 +250,11 @@ export const useQuizStore = create<QuizStoreState>()(
             },
           };
         });
+      },
+      recordQuestionOutcome(questionId, correct) {
+        set((state) => ({
+          questionProgress: updateProgress(state.questionProgress, questionId, correct),
+        }));
       },
       revealPracticeAnswer(questionId) {
         const state = get();

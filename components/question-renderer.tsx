@@ -1,4 +1,5 @@
 import { titleCase } from "@/lib/helpers";
+import { scoreQuestion } from "@/lib/scoring";
 import type { Question, QuestionResponse } from "@/lib/types";
 
 import { DragDropQuestion } from "@/components/questions/drag-drop-question";
@@ -56,6 +57,12 @@ export function QuestionRenderer({
   revealAnswer,
   onChange,
 }: QuestionRendererProps) {
+  const revealedScore = revealAnswer ? scoreQuestion(question, response) : undefined;
+  const answerToneClass = revealedScore?.correct
+    ? "border-emerald-500/20 bg-emerald-500/8"
+    : "border-rose-500/20 bg-rose-500/8";
+  const answerLabelClass = revealedScore?.correct ? "text-emerald-500" : "text-rose-400";
+
   return (
     <article className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
@@ -107,6 +114,7 @@ export function QuestionRenderer({
           question={question}
           response={response}
           disabled={disabled}
+          revealAnswer={revealAnswer}
           onChange={onChange}
         />
       ) : null}
@@ -115,6 +123,7 @@ export function QuestionRenderer({
           question={question}
           response={response}
           disabled={disabled}
+          revealAnswer={revealAnswer}
           onChange={onChange}
         />
       ) : null}
@@ -123,6 +132,7 @@ export function QuestionRenderer({
           question={question}
           response={response}
           disabled={disabled}
+          revealAnswer={revealAnswer}
           onChange={onChange}
         />
       ) : null}
@@ -131,6 +141,7 @@ export function QuestionRenderer({
           question={question}
           response={response}
           disabled={disabled}
+          revealAnswer={revealAnswer}
           onChange={onChange}
         />
       ) : null}
@@ -141,13 +152,16 @@ export function QuestionRenderer({
           question={question}
           response={response}
           disabled={disabled}
+          revealAnswer={revealAnswer}
           onChange={onChange}
         />
       ) : null}
 
       {revealAnswer ? (
-        <section className="rounded-[1.75rem] border border-emerald-500/20 bg-emerald-500/8 p-6">
-          <div className="text-xs uppercase tracking-[0.28em] text-emerald-500">Answer</div>
+        <section className={`rounded-[1.75rem] border p-6 ${answerToneClass}`}>
+          <div className={`text-xs uppercase tracking-[0.28em] ${answerLabelClass}`}>
+            {revealedScore?.correct ? "Correct" : "Incorrect"}
+          </div>
           <div className="mt-4 text-sm leading-7 text-[color:var(--color-text)]">
             {renderAnswerKey(question)}
           </div>

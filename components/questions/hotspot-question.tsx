@@ -6,6 +6,7 @@ interface HotspotQuestionProps {
   question: Question;
   response?: QuestionResponse;
   disabled?: boolean;
+  revealAnswer?: boolean;
   onChange: (response: QuestionResponse) => void;
 }
 

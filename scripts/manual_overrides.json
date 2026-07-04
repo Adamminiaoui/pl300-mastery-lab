@@ -403,5 +403,573 @@
     "explanation": "Recovered from the annotated answer area image and adjacent explanation text in the source PDF. All three statements are marked No.",
     "manualReview": true,
     "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "6": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "Full outer" },
+      { "id": "item-2", "text": "Inner" },
+      { "id": "item-3", "text": "Left anti" },
+      { "id": "item-4", "text": "Left outer" },
+      { "id": "item-5", "text": "Right anti" },
+      { "id": "item-6", "text": "Right outer" }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Join Product to ProductSubCategory", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Join ProductSubCategory to ProductCategory", "correctItemId": "item-4" }
+    ]
+  },
+  "12": {
+    "type": "dropdown",
+    "dropdowns": [
+      { "id": "box-1", "label": "There are [answer choice] different values in State including nulls.", "options": ["4", "65", "69", "73"], "correctAnswer": "69" },
+      { "id": "box-2", "label": "There are [answer choice] non-null values that occur only once in State.", "options": ["4", "65", "69", "73"], "correctAnswer": "4" }
+    ]
+  },
+  "96": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "item-1", "text": "ALL" },
+      { "id": "item-2", "text": "ALLSELECTED" },
+      { "id": "item-3", "text": "CALCULATE" },
+      { "id": "item-4", "text": "FILTER" },
+      { "id": "item-5", "text": "SELECTEDVALUE" }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Box 1", "correctItemId": "item-3" },
+      { "id": "zone-2", "label": "Box 2", "correctItemId": "item-2" }
+    ]
+  },
+  "99": {
+    "type": "dropdown",
+    "dropdowns": [
+      { "id": "box-1", "label": "Box 1", "options": ["IF", "SWITCH", "TRUE"], "correctAnswer": "IF" },
+      { "id": "box-2", "label": "Box 2", "options": ["&", "&&", "+"], "correctAnswer": "&" }
+    ]
+  },
+  "105": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Box 1",
+        "options": [
+          "DISTINCTCOUNT('Product'[ProductCategory])",
+          "COUNT('Product'[ProductCategory])",
+          "DISTINCTCOUNT('Sales'[ProductID])",
+          "SUM('Sales'[SalesQuantity])"
+        ],
+        "correctAnswer": "DISTINCTCOUNT('Product'[ProductCategory])"
+      },
+      {
+        "id": "box-2",
+        "label": "Box 2",
+        "options": ["'Sales'", "'Product'", "'Product'[ProductCategory]", "'Date'"],
+        "correctAnswer": "'Sales'"
+      }
+    ]
+  },
+  "110": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "item-1", "text": "[Country]=\"USA\"" },
+      { "id": "item-2", "text": "[Email]=USERPRINCIPALNAME()" },
+      { "id": "item-3", "text": "[Manager]=\"CFO\"" },
+      { "id": "item-4", "text": "FALSE()" },
+      { "id": "item-5", "text": "TRUE()" }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Human Resources", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Country", "correctItemId": "item-3" }
+    ]
+  },
+  "146": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "Select the [Department] and [Stage] columns and unpivot the other columns." },
+      { "id": "item-2", "text": "Select and unpivot the [Department] and [Stage] columns." },
+      { "id": "item-3", "text": "Group by [Department] and [School] and create a new column named [Avg Score] that uses the AVERAGE function on the [Score] column." },
+      { "id": "item-4", "text": "Rename the [Attribute] column as [School] and the [Value] column as [Score]." },
+      { "id": "item-5", "text": "Group by [Department], [School1], [School2], [School3], [School4] and create a new column named [Avg Score] that uses the AVERAGE function on the [Stage] column." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-3" }
+    ]
+  },
+  "159": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "Pin items from the reports to the dashboard." },
+      { "id": "item-2", "text": "Open the dashboard." },
+      { "id": "item-3", "text": "Create a phone layout for the existing reports." },
+      { "id": "item-4", "text": "Edit the Dashboard mobile view." },
+      { "id": "item-5", "text": "Rearrange, resize, or remove items from the mobile layout." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-2" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-4" },
+      { "id": "zone-4", "label": "Step 4", "correctItemId": "item-5" }
+    ]
+  },
+  "188": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "The dashed line representing the Year Average Employee Count was created by using [answer choice].",
+        "options": ["a trend line", "a secondary axis", "an average reference line", "two measures in the Values bucket"],
+        "correctAnswer": "an average reference line"
+      },
+      {
+        "id": "box-2",
+        "label": "To enable users to drill down to weeks or days, add the Weeks and Days field to the [answer choice] bucket.",
+        "options": ["Axis", "Values", "Legend", "Secondary values"],
+        "correctAnswer": "Axis"
+      }
+    ]
+  },
+  "205": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "item-1", "text": "Add a Bookmark navigator button." },
+      { "id": "item-2", "text": "Change the Bookmark property for the button." },
+      { "id": "item-3", "text": "Group the other two bookmarks." },
+      { "id": "item-4", "text": "Group the three bookmarks." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "First step", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Second step", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "Third step", "correctItemId": "item-2" }
+    ]
+  },
+  "207": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "item-1", "text": "Add the Country field to the filters on all the pages." },
+      { "id": "item-2", "text": "Configure the Country slicer to sync across all the pages." },
+      { "id": "item-3", "text": "Configure the Country slicer to sync only on the second and third pages." },
+      { "id": "item-4", "text": "Hide the Country slicer on the second and third pages." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "When a user selects a country on the first page, the report must filter the other pages.", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "The second and third pages must display only the filtered results.", "correctItemId": "item-4" }
+    ]
+  },
+  "211": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "item-1", "text": "Image Tagging" },
+      { "id": "item-2", "text": "Key Phrase Extraction" },
+      { "id": "item-3", "text": "Language Detection" },
+      { "id": "item-4", "text": "Sentiment Analysis" }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "What the customers most often provide feedback about", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Whether the customers like your company's product", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "The language of the feedback", "correctItemId": "item-3" }
+    ]
+  },
+  "265": {
+    "type": "ordering",
+    "dragItems": [
+      { "id": "item-1", "text": "Configure a scheduled refresh" },
+      { "id": "item-2", "text": "Configure a virtual network data gateway" },
+      { "id": "item-3", "text": "Add the dataset owner to the data source" },
+      { "id": "item-4", "text": "Add a data source" },
+      { "id": "item-5", "text": "Configure an on-premises data gateway" }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-5" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-3" },
+      { "id": "zone-4", "label": "Step 4", "correctItemId": "item-1" }
+    ]
+  },
+  "76": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "Select Department and Product and Unpivot Columns." },
+      { "id": "item-2", "text": "Select Use First Row as Headers." },
+      { "id": "item-3", "text": "Select Department and Product and Unpivot Other Columns." },
+      { "id": "item-4", "text": "Rename the Attribute column to Year and the Value column to Revenue." },
+      { "id": "item-5", "text": "Select Use Header as First Row." },
+      { "id": "item-6", "text": "Rename the Attribute column to Revenue and the Value column to Year." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-3" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-4" }
+    ]
+  },
+  "156": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "From Focus mode, pin the relevant visuals to DashboardA." },
+      { "id": "item-2", "text": "From Focus mode, review the generated visuals." },
+      { "id": "item-3", "text": "From DashboardA, select the TileA options, and then select View insights." },
+      { "id": "item-4", "text": "From ReportA, select the treemap visual options, and then select Spotlight." },
+      { "id": "item-5", "text": "From ReportA, select Get Insights." },
+      { "id": "item-6", "text": "From DashboardA, select TileA to open ReportA." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-3" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-2" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-1" }
+    ]
+  },
+  "245": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "Open Power BI Desktop." },
+      { "id": "item-2", "text": "Pin the page." },
+      { "id": "item-3", "text": "Pin each visual." },
+      { "id": "item-4", "text": "Open powerbi.com." },
+      { "id": "item-5", "text": "Open the Sales report." },
+      { "id": "item-6", "text": "Create a new report." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-4" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-5" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-2" }
+    ]
+  },
+  "15": {
+    "type": "select_place",
+    "dragItems": [
+      { "id": "item-1", "text": "From Power BI Desktop, select Get Data, and then select Folder." },
+      { "id": "item-2", "text": "From Power Query Editor, expand the Attributes column." },
+      { "id": "item-3", "text": "From Power Query Editor, remove the Content column." },
+      { "id": "item-4", "text": "From Power Query Editor, remove the Attributes column." },
+      { "id": "item-5", "text": "From Power BI Desktop, select Get Data, and then select Text/CSV." },
+      { "id": "item-6", "text": "From Power Query Editor, combine the Content column." }
+    ],
+    "dropZones": [
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-3" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-2" }
+    ]
+  },
+  "24": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "The error is caused by [answer choice].",
+        "options": ["error values in the source data", "mismatched data types", "NULL values"],
+        "correctAnswer": "mismatched data types"
+      },
+      {
+        "id": "box-2",
+        "label": "The desired outcome of the custom column is [answer choice].",
+        "options": ["1A", "A&1", "A1"],
+        "correctAnswer": "A1"
+      }
+    ]
+  },
+  "223": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "item-1", "text": "Area chart" },
+      { "id": "item-2", "text": "Funnel chart" },
+      { "id": "item-3", "text": "Multi-row card" },
+      { "id": "item-4", "text": "Pie chart" },
+      { "id": "item-5", "text": "Stacked bar chart" }
+    ],
+    "dropZones": [
+      {
+        "id": "zone-1",
+        "label": "Emphasizes the percentage of total profits contributed by each product category in dollars and as a percentage",
+        "correctItemId": "item-4"
+      },
+      {
+        "id": "zone-2",
+        "label": "Compares profit margins across sales regions",
+        "correctItemId": "item-5"
+      }
+    ]
+  },
+  "298": {
+    "type": "dropdown",
+    "correctAnswers": [],
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Permissions required in powerbi.com",
+        "options": [
+          "Access permissions to an app",
+          "The Member role to the workspace",
+          "The Viewer role to the workspace"
+        ],
+        "correctAnswer": "The Viewer role to the workspace"
+      },
+      {
+        "id": "box-2",
+        "label": "Permissions for the profit and loss dataset",
+        "options": [
+          "Build",
+          "Delete",
+          "Reshare"
+        ],
+        "correctAnswer": "Build"
+      }
+    ],
+    "manualReviewReasons": []
+  },
+  "299": {
+    "type": "dropdown",
+    "correctAnswers": [],
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Grant access by",
+        "options": [
+          "Sharing individual reports",
+          "Using a workspace membership",
+          "Using an app"
+        ],
+        "correctAnswer": "Using an app"
+      },
+      {
+        "id": "box-2",
+        "label": "Grant access to",
+        "options": [
+          "A dynamic distribution list",
+          "A mail-enabled security group in Azure Active Directory",
+          "Individual user emails"
+        ],
+        "correctAnswer": "A mail-enabled security group in Azure Active Directory"
+      }
+    ],
+    "manualReviewReasons": []
+  },
+  "276": {
+    "type": "dropdown",
+    "correctAnswer": null,
+    "correctAnswers": [],
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Populate a [answer choice] by using a card visualization that shows the percentage of late orders in the current month.",
+        "options": [
+          "report",
+          "bookmark",
+          "dashboard"
+        ],
+        "correctAnswer": "dashboard"
+      },
+      {
+        "id": "box-2",
+        "label": "Then configure a [answer choice].",
+        "options": [
+          "data alert.",
+          "phone view.",
+          "subscription."
+        ],
+        "correctAnswer": "data alert."
+      }
+    ],
+    "manualReviewReasons": []
+  },
+  "278": {
+    "type": "dropdown",
+    "correctAnswer": null,
+    "correctAnswers": [],
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "VAR AllCategoryRev = [answer choice](SUM([Revenue]),",
+        "options": [
+          "ALL",
+          "ALLEXCEPT",
+          "CALCULATE",
+          "DIVIDE",
+          "FILTER"
+        ],
+        "correctAnswer": "CALCULATE"
+      },
+      {
+        "id": "box-2",
+        "label": "[answer choice](ProductList[ProductCategory]))",
+        "options": [
+          "ALL",
+          "ALLEXCEPT",
+          "CALCULATE",
+          "DIVIDE",
+          "FILTER"
+        ],
+        "correctAnswer": "ALL"
+      },
+      {
+        "id": "box-3",
+        "label": "RETURN [answer choice](SUM([Revenue]), AllCategoryRev)",
+        "options": [
+          "ALL",
+          "ALLEXCEPT",
+          "CALCULATE",
+          "DIVIDE",
+          "FILTER"
+        ],
+        "correctAnswer": "DIVIDE"
+      }
+    ],
+    "manualReviewReasons": []
+  },
+  "279": {
+    "type": "select_place",
+    "correctAnswer": null,
+    "correctAnswers": [],
+    "dragItems": [
+      {
+        "id": "item-1",
+        "text": "From powerbi.com, assign the analysts the Contributor role to the workspace."
+      },
+      {
+        "id": "item-2",
+        "text": "From Power BI Desktop, add a Table Filter DAX Expression to the roles."
+      },
+      {
+        "id": "item-3",
+        "text": "From powerbi.com, add role members to the roles."
+      },
+      {
+        "id": "item-4",
+        "text": "From Power BI Desktop, create four roles."
+      },
+      {
+        "id": "item-5",
+        "text": "From Power BI Desktop, publish the dataset to powerbi.com."
+      }
+    ],
+    "dropZones": [
+      {
+        "id": "zone-1",
+        "label": "Step 1",
+        "correctItemId": "item-4"
+      },
+      {
+        "id": "zone-2",
+        "label": "Step 2",
+        "correctItemId": "item-2"
+      },
+      {
+        "id": "zone-3",
+        "label": "Step 3",
+        "correctItemId": "item-5"
+      },
+      {
+        "id": "zone-4",
+        "label": "Step 4",
+        "correctItemId": "item-3"
+      }
+    ],
+    "manualReviewReasons": []
+  },
+  "158": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Conditional formatting",
+        "options": [
+          "Background color",
+          "Data bars",
+          "Font color",
+          "Icons",
+          "Web URL"
+        ],
+        "correctAnswer": "Background color"
+      },
+      {
+        "id": "box-2",
+        "label": "Format by",
+        "options": [
+          "Color scale",
+          "Field value",
+          "Rules"
+        ],
+        "correctAnswer": "Rules"
+      }
+    ]
+  },
+  "180": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Minimum number of bookmarks",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "box-2",
+        "label": "Property",
+        "options": [
+          "Data",
+          "Display",
+          "Current page"
+        ],
+        "correctAnswer": "Display"
+      }
+    ]
+  },
+  "182": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Update the layout in the",
+        "options": [
+          "Dashboard mobile layout",
+          "Dashboard web layout",
+          "Report mobile layout"
+        ],
+        "correctAnswer": "Dashboard mobile layout"
+      },
+      {
+        "id": "box-2",
+        "label": "Resize and move",
+        "options": [
+          "The SubTotal map tile",
+          "The Total Sales and Total Quantity tiles",
+          "The Total Sales by Parent Category tile"
+        ],
+        "correctAnswer": "The Total Sales and Total Quantity tiles"
+      }
+    ]
+  },
+  "217": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "The value that occurs most frequently in the column is [answer choice].",
+        "options": [
+          "25",
+          "41",
+          "45",
+          "1431"
+        ],
+        "correctAnswer": "45"
+      },
+      {
+        "id": "box-2",
+        "label": "The smallest non-NULL value in the column is [answer choice].",
+        "options": [
+          "0",
+          "17",
+          "24",
+          "33"
+        ],
+        "correctAnswer": "24"
+      }
+    ]
   }
 }

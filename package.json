@@ -1,5 +1,5 @@
 {
-  "name": "pl300-exam-simulator",
+  "name": "pl300-mastery-lab",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "extract-pdf": "node scripts/extract-pdf.mjs",
-    "validate-questions": "node scripts/validate-questions.mjs"
+    "validate-questions": "node scripts/validate-questions.mjs",
+    "audit-questions": "node scripts/audit-questions.mjs"
   },
   "dependencies": {
     "next": "16.2.10",
