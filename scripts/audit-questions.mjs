@@ -16,6 +16,11 @@ function pushCheck(checks, ok, code, details) {
   checks.push({ ok, code, details });
 }
 
+function getMaxExplanationBox(question) {
+  const matches = [...String(question.explanation ?? "").matchAll(/Box\s+(\d+)\s*:/gi)];
+  return matches.length ? Math.max(...matches.map((match) => Number(match[1]))) : 0;
+}
+
 function auditQuestion(question) {
   const checks = [];
   const optionIds = new Set((question.options ?? []).map((option) => option.id));
@@ -52,11 +57,18 @@ function auditQuestion(question) {
   }
 
   if (["dropdown", "hotspot"].includes(question.type)) {
+    const expectedBoxes = getMaxExplanationBox(question);
     pushCheck(
       checks,
       (question.dropdowns ?? []).length > 0,
       "dropdowns-present",
       `dropdown count ${(question.dropdowns ?? []).length}`,
+    );
+    pushCheck(
+      checks,
+      !expectedBoxes || (question.dropdowns ?? []).length >= expectedBoxes,
+      "dropdown-count-matches-explanation",
+      `dropdown count ${(question.dropdowns ?? []).length}, explanation boxes ${expectedBoxes}`,
     );
     for (const dropdown of question.dropdowns ?? []) {
       const normalizedOptions = (dropdown.options ?? []).map((option) => normalize(option));
