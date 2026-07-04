@@ -20,6 +20,10 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "PL-300 Exam Simulator",
   description: "Practice, exam, and full-mock simulator for the Microsoft PL-300 exam.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

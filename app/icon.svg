@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="PL-300 Simulator icon">
+  <defs>
+    <linearGradient id="bg" x1="24" y1="20" x2="228" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16223b"/>
+      <stop offset="1" stop-color="#0a1224"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="48" y1="92" x2="208" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#203457"/>
+      <stop offset="1" stop-color="#122342"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <rect x="16" y="16" width="224" height="224" rx="40" fill="none" stroke="#5b77a5" stroke-opacity=".35" stroke-width="4"/>
+  <g transform="translate(58 46)">
+    <rect width="40" height="40" rx="8" fill="#f35325"/>
+    <rect x="48" width="40" height="40" rx="8" fill="#81bc06"/>
+    <rect y="48" width="40" height="40" rx="8" fill="#05a6f0"/>
+    <rect x="48" y="48" width="40" height="40" rx="8" fill="#ffba08"/>
+  </g>
+  <rect x="42" y="136" width="172" height="74" rx="24" fill="url(#panel)" stroke="#7ea0d4" stroke-opacity=".18"/>
+  <text x="128" y="185" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" fill="#f5f8ff" letter-spacing="1.5">300</text>
+  <text x="128" y="226" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#90a8d1" letter-spacing="7">PL</text>
+</svg>
