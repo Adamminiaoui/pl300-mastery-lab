@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --color-surface: #f4efe6;
+  --color-panel: #fffaf2;
+  --color-text: #172033;
+  --color-muted: #677489;
+  --color-accent: #0f766e;
+  --color-accent-soft: rgba(15, 118, 110, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-plex-mono);
+}
+
+:root[data-theme="dark"] {
+  --color-surface: #07111f;
+  --color-panel: #102038;
+  --color-text: #edf4ff;
+  --color-muted: #96a5bc;
+  --color-accent: #f97316;
+  --color-accent-soft: rgba(249, 115, 22, 0.14);
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.2), transparent 28%),
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.18), transparent 24%),
+    var(--color-surface);
+  color: var(--color-text);
+}
+
+body {
+  background:
+    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.02)),
+    var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+}
+
+option {
+  color: #101828;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(103, 116, 137, 0.45);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

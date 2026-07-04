@@ -1,0 +1,407 @@
+{
+  "33": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Employee review data",
+        "options": ["None", "Organizational", "Private", "Public"],
+        "correctAnswer": "Private"
+      },
+      {
+        "id": "box-2",
+        "label": "Sales opportunities",
+        "options": ["None", "Organizational", "Private", "Public"],
+        "correctAnswer": "Organizational"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Employee review data = Private; Sales opportunities = Organizational.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "35": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "To configure the query to start on row 3",
+        "options": ["Keep top rows", "Remove errors", "Remove top rows"],
+        "correctAnswer": "Remove top rows"
+      },
+      {
+        "id": "box-2",
+        "label": "To use the values in row 3 as the column names",
+        "options": ["Rename", "Replace values", "Use first row as headers"],
+        "correctAnswer": "Use first row as headers"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Remove top rows; Use first row as headers.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "42": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Fact table",
+        "options": ["Date", "Patient", "Test", "Test Result"],
+        "correctAnswer": "Test Result"
+      },
+      {
+        "id": "box-2",
+        "label": "Surrogate key",
+        "options": ["Date of birth", "Last name", "Patient key", "Patient source ID"],
+        "correctAnswer": "Patient key"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Fact table = Test Result; Surrogate key = Patient key.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "116": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Function to build the calculated table",
+        "options": ["ROLLUP", "SELECTCOLUMNS", "SUMMARIZE"],
+        "correctAnswer": "SUMMARIZE"
+      },
+      {
+        "id": "box-2",
+        "label": "Column to group by",
+        "options": ["Date[Date]", "Date[Year]", "Sales[Date]"],
+        "correctAnswer": "Date[Year]"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: SUMMARIZE; Date[Year].",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "121": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "To create Sales Fact",
+        "options": [
+          "Duplicate the All Sales query.",
+          "Duplicate the Customer Dimension query.",
+          "Reference the All Sales query.",
+          "Reference the Customer Dimension query."
+        ],
+        "correctAnswer": "Reference the All Sales query."
+      },
+      {
+        "id": "box-2",
+        "label": "Clear Enable data load for",
+        "options": ["All Sales", "Customer Dimension", "Product Dimension", "Sales Fact"],
+        "correctAnswer": "All Sales"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Reference the All Sales query; All Sales.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "129": {
+    "type": "drag_drop",
+    "dragItems": [
+      { "id": "inner", "text": "Inner" },
+      { "id": "left-anti", "text": "Left anti" },
+      { "id": "left-outer", "text": "Left outer" },
+      { "id": "right-anti", "text": "Right anti" },
+      { "id": "right-outer", "text": "Right outer" }
+    ],
+    "dropZones": [
+      {
+        "id": "zone-1",
+        "label": "Join Customers with Address",
+        "correctItemId": "right-outer"
+      },
+      {
+        "id": "zone-2",
+        "label": "Join Address with Country",
+        "correctItemId": "inner"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Correct mapping: Join Customers with Address = Right outer; Join Address with Country = Inner.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "131": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "The tables represent a [answer choice] dimension",
+        "options": ["degenerate", "junk", "role-playing", "snowflake"],
+        "correctAnswer": "snowflake"
+      },
+      {
+        "id": "box-2",
+        "label": "[answer choice] is the only table that supports a hierarchy model for DimOrgVertical",
+        "options": ["DimOrganizations", "DimOrgSubVertical", "FactSales"],
+        "correctAnswer": "DimOrgSubVertical"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: snowflake; DimOrgSubVertical.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "132": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Outer function",
+        "options": ["ELSE", "IF", "IF.EAGER", "OR"],
+        "correctAnswer": "IF.EAGER"
+      },
+      {
+        "id": "box-2",
+        "label": "Value when Qualification > 0.7",
+        "options": ["HIGH", "LOW", "MEDIUM"],
+        "correctAnswer": "HIGH"
+      },
+      {
+        "id": "box-3",
+        "label": "Value for remaining cases",
+        "options": ["HIGH", "LOW", "MEDIUM"],
+        "correctAnswer": "MEDIUM"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: IF.EAGER; HIGH; MEDIUM.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "134": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Function before ('Item'[Item])",
+        "options": ["CALCULATE", "HASONEVALUE", "SELECTEDVALUE", "WINDOW"],
+        "correctAnswer": "SELECTEDVALUE"
+      },
+      {
+        "id": "box-2",
+        "label": "RANKX ties parameter",
+        "options": ["DEFAULT", "DENSE", "FIRST", "SKIP"],
+        "correctAnswer": "DENSE"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: SELECTEDVALUE; DENSE.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "135": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Function to expand location",
+        "options": [
+          "Table.ExpandListColumn",
+          "Table.ExpandRecordColumn",
+          "Table.DuplicateColumn"
+        ],
+        "correctAnswer": "Table.ExpandListColumn"
+      },
+      {
+        "id": "box-2",
+        "label": "Function to hide CountryOrRegion",
+        "options": ["Table.RemoveColumns", "Table.ReorderColumns", "Table.RemoveRows"],
+        "correctAnswer": "Table.RemoveColumns"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Table.ExpandListColumn; Table.RemoveColumns.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "136": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Cross filter direction for the many-to-one relationship",
+        "options": ["Both", "None", "Single"],
+        "correctAnswer": "Single"
+      },
+      {
+        "id": "box-2",
+        "label": "First step to enable bi-directional filtering and row-level security (RLS) for the many-to-many relationship",
+        "options": [
+          "change Cross filter direction",
+          "define the relationship as active",
+          "delete the many-to-one relationship"
+        ],
+        "correctAnswer": "define the relationship as active"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Single; define the relationship as active.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "141": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Optimize",
+        "options": [
+          "Change Data Type of OrderID to Binary.",
+          "Change Data Type of OrderID to Whole Number.",
+          "Disable Summarization.",
+          "Enable Summarization."
+        ],
+        "correctAnswer": "Change Data Type of OrderID to Whole Number."
+      },
+      {
+        "id": "box-2",
+        "label": "Reduce the size",
+        "options": [
+          "Delete the OrderTitle and OrderDescription columns.",
+          "Hide the OrderTitle and OrderDescription columns.",
+          "Replace errors in the OrderTitle and OrderDescription column."
+        ],
+        "correctAnswer": "Delete the OrderTitle and OrderDescription columns."
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Change Data Type of OrderID to Whole Number; Delete the OrderTitle and OrderDescription columns.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "227": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "A user can change a bar chart to a pie chart in the Sales report.",
+        "options": ["Yes", "No"],
+        "correctAnswer": "Yes"
+      },
+      {
+        "id": "box-2",
+        "label": "A user can reshare their modified visuals with users outside of the sales department.",
+        "options": ["Yes", "No"],
+        "correctAnswer": "No"
+      },
+      {
+        "id": "box-3",
+        "label": "A user can create a new quick measure and add it to a visual.",
+        "options": ["Yes", "No"],
+        "correctAnswer": "No"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Yes; No; No.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "229": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Report1",
+        "options": [
+          "Microsoft SQL Server Reporting Services (SSRS) (.rdlc)",
+          "Power BI (.pbix)",
+          "Power BI paginated (.rdl)"
+        ],
+        "correctAnswer": "Microsoft SQL Server Reporting Services (SSRS) (.rdlc)"
+      },
+      {
+        "id": "box-2",
+        "label": "Report2",
+        "options": [
+          "Microsoft SQL Server Reporting Services (SSRS) (.rdlc)",
+          "Power BI (.pbix)",
+          "Power BI paginated (.rdl)"
+        ],
+        "correctAnswer": "Power BI (.pbix)"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Report1 = Microsoft SQL Server Reporting Services (SSRS) (.rdlc); Report2 = Power BI (.pbix).",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "232": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Type",
+        "options": ["Matrix", "Multi-row card", "Table"],
+        "correctAnswer": "Matrix"
+      },
+      {
+        "id": "box-2",
+        "label": "Format",
+        "options": [
+          "Set Rows subtotals to Off.",
+          "Set Stepped layout to Off.",
+          "Set Switch values to rows to On."
+        ],
+        "correctAnswer": "Set Switch values to rows to On."
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Matrix; Set Switch values to rows to On.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "271": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Users in the finance group can [answer choice] the semantic model.",
+        "options": [
+          "assign sensitivity labels to",
+          "use Analyze in Excel with",
+          "delete"
+        ],
+        "correctAnswer": "assign sensitivity labels to"
+      },
+      {
+        "id": "box-2",
+        "label": "Users in the corp group can [answer choice] the semantic model.",
+        "options": [
+          "grant the Build permission for",
+          "grant the Read permission for",
+          "remove a table from"
+        ],
+        "correctAnswer": "grant the Read permission for"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: assign sensitivity labels to; grant the Read permission for.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  },
+  "296": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "You need an on-premises data gateway to refresh the dataset.",
+        "options": ["Yes", "No"],
+        "correctAnswer": "No"
+      },
+      {
+        "id": "box-2",
+        "label": "You need to configure a scheduled refresh of the dataset.",
+        "options": ["Yes", "No"],
+        "correctAnswer": "No"
+      },
+      {
+        "id": "box-3",
+        "label": "You can use Basic authentication on the dataset to connect to the data.",
+        "options": ["Yes", "No"],
+        "correctAnswer": "No"
+      }
+    ],
+    "explanation": "Recovered from the annotated answer area image and adjacent explanation text in the source PDF. All three statements are marked No.",
+    "manualReview": true,
+    "manualReviewReasons": ["image-only-answer-recovered"]
+  }
+}
