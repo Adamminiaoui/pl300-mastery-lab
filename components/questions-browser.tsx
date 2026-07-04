@@ -37,7 +37,6 @@ export function QuestionsBrowser() {
   const [search, setSearch] = useState("");
   const [type, setType] = useState("all");
   const [topic, setTopic] = useState("all");
-  const [outcome, setOutcome] = useState("all");
   const [hasImage, setHasImage] = useState(false);
   const [hasExplanation, setHasExplanation] = useState(false);
   const [markedOnly, setMarkedOnly] = useState(false);
@@ -73,12 +72,6 @@ export function QuestionsBrowser() {
       if (topic !== "all" && !question.tags.includes(topic)) {
         return false;
       }
-      if (outcome === "correct" && progressItem?.lastOutcome !== "correct") {
-        return false;
-      }
-      if (outcome === "incorrect" && progressItem?.lastOutcome !== "incorrect") {
-        return false;
-      }
       if (hasImage && !question.hasImage) {
         return false;
       }
@@ -91,7 +84,7 @@ export function QuestionsBrowser() {
 
       return true;
     });
-  }, [hasExplanation, hasImage, markedOnly, markedQuestionIds, outcome, progress, search, topic, type]);
+  }, [hasExplanation, hasImage, markedOnly, markedQuestionIds, progress, search, topic, type]);
 
   const activeQuestionId = filtered.some((question) => question.id === selectedQuestionId)
     ? selectedQuestionId
@@ -139,7 +132,7 @@ export function QuestionsBrowser() {
   return (
     <div className="space-y-6">
       <section className="rounded-[1.75rem] border border-white/10 bg-[color:var(--color-panel)] p-6">
-        <div className="grid gap-4 lg:grid-cols-4">
+        <div className="grid gap-4 lg:grid-cols-3">
           <input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
@@ -169,15 +162,6 @@ export function QuestionsBrowser() {
                 {item}
               </option>
             ))}
-          </select>
-          <select
-            value={outcome}
-            onChange={(event) => setOutcome(event.target.value)}
-            className="rounded-2xl border border-white/10 bg-transparent px-4 py-3"
-          >
-            <option value="all">Any result</option>
-            <option value="correct">Correct</option>
-            <option value="incorrect">Incorrect</option>
           </select>
         </div>
 
