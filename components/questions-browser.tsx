@@ -31,31 +31,19 @@ function hasAnyResponse(response?: QuestionResponse) {
 
 export function QuestionsBrowser() {
   const progress = useQuizStore((state) => state.questionProgress);
-  const sessions = useQuizStore((state) => state.sessions);
   const recordQuestionOutcome = useQuizStore((state) => state.recordQuestionOutcome);
 
   const [search, setSearch] = useState("");
   const [type, setType] = useState("all");
   const [topic, setTopic] = useState("all");
-  const [hasImage, setHasImage] = useState(false);
-  const [hasExplanation, setHasExplanation] = useState(false);
-  const [markedOnly, setMarkedOnly] = useState(false);
   const [selectedQuestionId, setSelectedQuestionId] = useState<number>(questions[0]?.id ?? 1);
   const [responses, setResponses] = useState<Record<number, QuestionResponse>>({});
   const [revealedQuestionIds, setRevealedQuestionIds] = useState<number[]>([]);
-
-  const markedQuestionIds = useMemo(
-    () =>
-      new Set(Object.values(sessions).flatMap((session) => session?.markedQuestionIds ?? [])),
-    [sessions],
-  );
 
   const filtered = useMemo(() => {
     const query = search.trim().toLowerCase();
 
     return questions.filter((question) => {
-      const progressItem = progress[question.id];
-
       if (query) {
         const matchesNumber = String(question.id).includes(query);
         const matchesText =
@@ -72,19 +60,10 @@ export function QuestionsBrowser() {
       if (topic !== "all" && !question.tags.includes(topic)) {
         return false;
       }
-      if (hasImage && !question.hasImage) {
-        return false;
-      }
-      if (hasExplanation && !question.explanation.trim()) {
-        return false;
-      }
-      if (markedOnly && !markedQuestionIds.has(question.id)) {
-        return false;
-      }
 
       return true;
     });
-  }, [hasExplanation, hasImage, markedOnly, markedQuestionIds, progress, search, topic, type]);
+  }, [search, topic, type]);
 
   const activeQuestionId = filtered.some((question) => question.id === selectedQuestionId)
     ? selectedQuestionId
@@ -165,32 +144,6 @@ export function QuestionsBrowser() {
           </select>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-4 text-sm">
-          <label className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              checked={hasImage}
-              onChange={(event) => setHasImage(event.target.checked)}
-            />
-            Has image
-          </label>
-          <label className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              checked={hasExplanation}
-              onChange={(event) => setHasExplanation(event.target.checked)}
-            />
-            Has explanation
-          </label>
-          <label className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              checked={markedOnly}
-              onChange={(event) => setMarkedOnly(event.target.checked)}
-            />
-            Marked for review
-          </label>
-        </div>
       </section>
 
       {filtered.length === 0 ? (

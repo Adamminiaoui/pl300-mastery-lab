@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+import { examBlueprint } from "@/lib/questions";
 import { useQuizStore } from "@/store/quiz-store";
 
 export function ExamSetup() {
@@ -34,7 +35,25 @@ export function ExamSetup() {
       </label>
 
       <div className="rounded-[1.5rem] border border-white/10 bg-black/5 p-4 text-sm leading-7 text-[color:var(--color-muted)]">
-        A new exam will randomly select 60 questions from the full bank. Answers stay hidden until you submit.
+        Each exam pulls 60 questions from all 301 questions by following the PL-300 skill blueprint instead of
+        using a pure random draw. Answers stay hidden until you submit.
+      </div>
+
+      <div className="grid gap-3 md:grid-cols-2">
+        {examBlueprint.map((item) => (
+          <div
+            key={item.id}
+            className="rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-4"
+          >
+            <div className="text-sm font-semibold text-[color:var(--color-text)]">{item.label}</div>
+            <div className="mt-1 text-sm text-[color:var(--color-muted)]">
+              {item.questionCount} questions
+            </div>
+            <div className="mt-2 text-xs uppercase tracking-[0.22em] text-[color:var(--color-muted)]">
+              {item.percentageRange}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="flex flex-wrap gap-3">

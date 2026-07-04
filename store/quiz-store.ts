@@ -4,7 +4,12 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 import { createId } from "@/lib/helpers";
-import { getIncorrectQuestionIds, getQuestions, questionIds } from "@/lib/questions";
+import {
+  buildWeightedExamQuestionIds,
+  getIncorrectQuestionIds,
+  getQuestions,
+  questionIds,
+} from "@/lib/questions";
 import { buildSessionResult, scoreQuestion } from "@/lib/scoring";
 import type {
   ExamConfig,
@@ -89,15 +94,6 @@ function createSession(
   };
 }
 
-function randomQuestionIds(count: number) {
-  const pool = [...questionIds];
-  for (let index = pool.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [pool[index], pool[swapIndex]] = [pool[swapIndex], pool[index]];
-  }
-  return pool.slice(0, count);
-}
-
 export const useQuizStore = create<QuizStoreState>()(
   persist(
     (set, get) => ({
@@ -139,8 +135,8 @@ export const useQuizStore = create<QuizStoreState>()(
       startExamSession(config) {
         const session = createSession(
           "exam",
-          randomQuestionIds(60),
-          "Random 60-question exam",
+          buildWeightedExamQuestionIds(60),
+          "PL-300 weighted 60-question exam",
           config.timeLimitMinutes,
         );
         set((state) => ({
