@@ -56,6 +56,7 @@ export interface Question {
   hasImage: boolean;
   manualReview: boolean;
   manualReviewReasons?: string[];
+  acceptAnyOrder?: boolean;
   answerFormat: "single" | "multi" | "dropdown" | "drag";
 }
 

@@ -25,6 +25,10 @@ function getDropZoneTextMap(question: Question) {
   }, {});
 }
 
+function getDragItemTextMap(question: Question) {
+  return new Map((question.dragItems ?? []).map((item) => [item.id, item.text]));
+}
+
 export function getPossiblePoints(question: Question) {
   if (question.dropdowns?.length) {
     return question.dropdowns.length;
@@ -77,11 +81,36 @@ export function scoreQuestion(question: Question, response?: QuestionResponse): 
   }
 
   if (question.dropZones?.length) {
-    let earnedPoints = 0;
     const fields = response.fields ?? {};
+    const itemTextMap = getDragItemTextMap(question);
     const expectedText = getDropZoneTextMap(question) ?? {};
     const received = question.dropZones.map((zone) => fields[zone.id] ?? "");
     const expected = question.dropZones.map((zone) => expectedText[zone.id] ?? zone.correctItemId);
+
+    if (question.acceptAnyOrder) {
+      const expectedIds = question.dropZones.map((zone) => zone.correctItemId);
+      const receivedSelections = received.filter(Boolean);
+      const uniqueReceivedSelections = [...new Set(receivedSelections)];
+      const uniqueExpectedIds = [...new Set(expectedIds)];
+      const earnedPoints = uniqueExpectedIds.reduce(
+        (score, itemId) => score + (uniqueReceivedSelections.includes(itemId) ? 1 : 0),
+        0,
+      );
+      const correct =
+        receivedSelections.length === expectedIds.length &&
+        uniqueReceivedSelections.length === receivedSelections.length &&
+        compareSets(uniqueReceivedSelections, uniqueExpectedIds);
+
+      return {
+        correct,
+        earnedPoints,
+        possiblePoints,
+        expected: uniqueExpectedIds.map((itemId) => itemTextMap.get(itemId) ?? itemId),
+        received: received.map((itemId) => itemTextMap.get(itemId) ?? itemId),
+      };
+    }
+
+    let earnedPoints = 0;
 
     question.dropZones.forEach((zone: DropZone) => {
       if ((fields[zone.id] ?? "") === zone.correctItemId) {

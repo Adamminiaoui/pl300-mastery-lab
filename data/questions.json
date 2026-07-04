@@ -499,12 +499,12 @@
       {
         "id": "zone-2",
         "label": "Step 2",
-        "correctItemId": "item-3"
+        "correctItemId": "item-4"
       },
       {
         "id": "zone-3",
         "label": "Step 3",
-        "correctItemId": "item-3"
+        "correctItemId": "item-1"
       }
     ],
     "explanation": "Import From Excel since it has not been loaded to Powerbi initially\n\nAppend Table 2 to Table 1\n\nRemove Duplicates from the table appended to (Table1)",
@@ -1060,11 +1060,11 @@
     "dragItems": [
       {
         "id": "item-1",
-        "text": "Select the e Month and Month Number columns."
+        "text": "Select the Month and Month Number columns."
       },
       {
         "id": "item-2",
-        "text": "Select Unpivot other c columns."
+        "text": "Select Unpivot Other Columns."
       },
       {
         "id": "item-3",
@@ -1072,23 +1072,23 @@
       },
       {
         "id": "item-4",
-        "text": "Select the 2019, 2 2020, and 2021 columns."
+        "text": "Select the 2019, 2020, and 2021 columns."
       },
       {
         "id": "item-5",
-        "text": "Select t Transpose."
+        "text": "Select Transpose."
       }
     ],
     "dropZones": [
       {
         "id": "zone-1",
         "label": "Step 1",
-        "correctItemId": "item-3"
+        "correctItemId": "item-1"
       },
       {
         "id": "zone-2",
         "label": "Step 2",
-        "correctItemId": "item-3"
+        "correctItemId": "item-2"
       },
       {
         "id": "zone-3",
@@ -2831,31 +2831,31 @@
       },
       {
         "id": "item-2",
-        "text": "Assign userstotherole."
+        "text": "Assign users to the role."
       },
       {
         "id": "item-3",
-        "text": "Add a filterto the report."
+        "text": "Add a filter to the report."
       },
       {
         "id": "item-4",
-        "text": "Create aroledefinition"
+        "text": "Create a role definition."
       },
       {
         "id": "item-5",
-        "text": "Importthedatato Power BI Desktop."
+        "text": "Import the data into Power BI Desktop."
       }
     ],
     "dropZones": [
       {
         "id": "zone-1",
         "label": "Step 1",
-        "correctItemId": "item-1"
+        "correctItemId": "item-5"
       },
       {
         "id": "zone-2",
         "label": "Step 2",
-        "correctItemId": "item-1"
+        "correctItemId": "item-4"
       },
       {
         "id": "zone-3",
@@ -2904,7 +2904,7 @@
     "dragItems": [
       {
         "id": "item-1",
-        "text": "Merge [Sales_Hanager] and [Sales_Regionj by using a leftjoin."
+        "text": "Merge [Sales_Manager] and [Sales_Region] by using a left join."
       },
       {
         "id": "item-2",
@@ -2912,23 +2912,23 @@
       },
       {
         "id": "item-3",
-        "text": "Merge [5 ales_Region] and [Sales_Manager] by using an inner join as a new"
+        "text": "Merge [Region_Manager] and [Manager] by using an inner join."
       },
       {
         "id": "item-4",
-        "text": "query named [Sales_Region_and_Manager]."
+        "text": "Merge [Sales_Region] and [Sales_Manager] by using an inner join as a new query named [Sales_Region_and_Manager]."
       },
       {
         "id": "item-5",
-        "text": "Merge [Sales_Region] and [Region_Manager] by using a rightjoin as anew query"
+        "text": "Merge [Sales_Region] and [Region_Manager] by using a right join as a new query named [Sales_Region_and_Region_Manager]."
       },
       {
         "id": "item-6",
-        "text": "named [Sales_Region_and_Region_Manager]."
+        "text": "Merge [Sales_Region] and [Region_Manager] by using a full outer join."
       },
       {
         "id": "item-7",
-        "text": "Merge [5 ales_Region] and [Region_Manager] by using an inner join."
+        "text": "Merge [Sales_Region] and [Region_Manager] by using an inner join."
       }
     ],
     "dropZones": [
@@ -2940,12 +2940,12 @@
       {
         "id": "zone-2",
         "label": "Step 2",
-        "correctItemId": "item-3"
+        "correctItemId": "item-2"
       },
       {
         "id": "zone-3",
         "label": "Step 3",
-        "correctItemId": "item-2"
+        "correctItemId": "item-7"
       }
     ],
     "explanation": "1.Merge [Region_Manager] and [Manager] by using an inner join.\n\n3.Merge [Sales_Region] and [Sales_Manager] by using an inner join.\n\n6.Merge [Sales_Region] and [Region_Manager] by using an inner join.",
@@ -2962,7 +2962,8 @@
     "hasImage": true,
     "manualReview": false,
     "manualReviewReasons": [],
-    "answerFormat": "drag"
+    "answerFormat": "drag",
+    "acceptAnyOrder": true
   },
   {
     "id": 55,
@@ -3276,7 +3277,7 @@
     "dragItems": [
       {
         "id": "item-1",
-        "text": "Use headers as th fist row."
+        "text": "Use headers as the first row."
       },
       {
         "id": "item-2",
@@ -3284,11 +3285,11 @@
       },
       {
         "id": "item-3",
-        "text": "Rename the Atriute column as Year."
+        "text": "Rename the Attribute column as Year."
       },
       {
         "id": "item-4",
-        "text": "Use the frst row as headers."
+        "text": "Use the first row as headers."
       },
       {
         "id": "item-5",
@@ -3296,33 +3297,33 @@
       },
       {
         "id": "item-6",
-        "text": "Unpivotall the columns other than Measure"
+        "text": "Unpivot all the columns other than Measure."
       },
       {
         "id": "item-7",
-        "text": "Changethedatatypeofthe Yearcolumnto Date"
+        "text": "Change the data type of the Year column to Date."
       }
     ],
     "dropZones": [
       {
         "id": "zone-1",
         "label": "Step 1",
-        "correctItemId": "item-2"
+        "correctItemId": "item-4"
       },
       {
         "id": "zone-2",
         "label": "Step 2",
-        "correctItemId": "item-2"
+        "correctItemId": "item-6"
       },
       {
         "id": "zone-3",
         "label": "Step 3",
-        "correctItemId": "item-2"
+        "correctItemId": "item-3"
       },
       {
         "id": "zone-4",
         "label": "Step 4",
-        "correctItemId": "item-2"
+        "correctItemId": "item-7"
       }
     ],
     "explanation": "1. Use first row as header\n\n2. Unpivot all columns other than \"Measure\"\n\n3. Rename \"Attribute\" to \"Year\"\n\n4. Change data type of \"Year\" column to Date",
@@ -8907,30 +8908,30 @@
     "dragItems": [
       {
         "id": "item-1",
-        "text": "From Excel, formatthe data in Excel 1 asa table."
+        "text": "From Excel, format the data in Excel1 as a table."
       },
       {
         "id": "item-2",
-        "text": "Frompowerbi.com, import Excel 1 as adataset."
+        "text": "From powerbi.com, import Excel1 as a dataset."
       },
       {
         "id": "item-3",
-        "text": "Frompowerbi.com, addatileforthe Excel 1 datasetto Dashboard A"
+        "text": "From powerbi.com, add a tile for the Excel1 dataset to DashboardA."
       },
       {
         "id": "item-4",
-        "text": "From Excel, create a named range by using the data in Excel 1."
+        "text": "From Excel, create a named range by using the data in Excel1."
       },
       {
         "id": "item-5",
-        "text": "Frompowerbi.com, upload Excel 1,"
+        "text": "From powerbi.com, upload Excel1."
       }
     ],
     "dropZones": [
       {
         "id": "zone-1",
         "label": "Step 1",
-        "correctItemId": "item-4"
+        "correctItemId": "item-1"
       },
       {
         "id": "zone-2",
@@ -8940,7 +8941,7 @@
       {
         "id": "zone-3",
         "label": "Step 3",
-        "correctItemId": "item-4"
+        "correctItemId": "item-3"
       }
     ],
     "explanation": "Step 1: [\"The solution must minimize development time\", so:] format the data as a table\n\nStep 2: From powerbi.com, import Excel1 as a dataset.\n\nStep 3: From powerbi.com, add a tile for the Excel1 dataset to DashboarA.",
@@ -10713,11 +10714,11 @@
       },
       {
         "id": "item-2",
-        "text": "Set Format style to Field value."
+        "text": "Set Format style to Rules."
       },
       {
         "id": "item-3",
-        "text": "Open the Background color dialog forthe Revenue column."
+        "text": "Open the Background color dialog for the Revenue column."
       },
       {
         "id": "item-4",
@@ -10733,7 +10734,7 @@
       {
         "id": "zone-2",
         "label": "Step 2",
-        "correctItemId": "item-3"
+        "correctItemId": "item-2"
       },
       {
         "id": "zone-3",

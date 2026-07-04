@@ -31,6 +31,7 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
     missing_prompt: list[int] = []
     missing_answer: list[int] = []
     missing_explanation: list[int] = []
+    duplicate_sequence_answers: list[int] = []
     manual_review: list[int] = []
 
     for question in questions:
@@ -45,6 +46,14 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
             missing_answer.append(question_id)
         if not (question.get("explanation") or "").strip():
             missing_explanation.append(question_id)
+        if question.get("type") in {"ordering", "select_place"}:
+            correct_items = [
+                item.get("correctItemId")
+                for item in question.get("dropZones", [])
+                if item.get("correctItemId")
+            ]
+            if len(correct_items) != len(set(correct_items)):
+                duplicate_sequence_answers.append(question_id)
         if question.get("manualReview"):
             manual_review.append(question_id)
 
@@ -57,6 +66,7 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
         "missingPromptOrAssets": missing_prompt,
         "missingAnswers": missing_answer,
         "missingExplanations": missing_explanation,
+        "duplicateSequenceAnswers": duplicate_sequence_answers,
         "manualReview": manual_review,
     }
 
@@ -106,6 +116,11 @@ def main() -> int:
         print(
             "warning: questions missing explanations: "
             f"{report['missingExplanations'][:25]}"
+        )
+    if report["duplicateSequenceAnswers"]:
+        print(
+            "warning: sequence questions with duplicate correct items: "
+            f"{report['duplicateSequenceAnswers'][:25]}"
         )
     if report["manualReview"]:
         print(f"warning: manual review questions: {report['manualReview'][:25]}")

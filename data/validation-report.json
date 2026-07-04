@@ -7,6 +7,7 @@
   "missingPromptOrAssets": [],
   "missingAnswers": [],
   "missingExplanations": [],
+  "duplicateSequenceAnswers": [],
   "manualReview": [
     33,
     35,

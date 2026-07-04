@@ -31,6 +31,25 @@ function renderAnswerKey(question: Question) {
 
   if (question.dropZones?.length && question.dragItems?.length) {
     const itemMap = new Map(question.dragItems.map((item) => [item.id, item.text]));
+    if (question.acceptAnyOrder) {
+      const correctItems = Array.from(
+        new Set(
+          question.dropZones.map((zone) => itemMap.get(zone.correctItemId) ?? zone.correctItemId),
+        ),
+      );
+
+      return (
+        <div className="space-y-3">
+          <div className="font-semibold">Any order:</div>
+          <ul className="space-y-2">
+            {correctItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
     return (
       <ul className="space-y-2">
         {question.dropZones.map((zone) => (
