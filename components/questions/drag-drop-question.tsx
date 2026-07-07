@@ -38,7 +38,7 @@ export function DragDropQuestion({
           {options.map((option) => (
             <div
               key={option.value}
-              className="rounded-full border border-white/10 bg-[color:var(--color-panel)] px-4 py-2 text-sm font-medium text-[color:var(--color-text)]"
+              className="max-w-full rounded-[1rem] border border-white/10 bg-[color:var(--color-panel)] px-4 py-2 text-sm font-medium text-[color:var(--color-text)] whitespace-normal break-words"
             >
               {option.label}
             </div>
@@ -60,7 +60,7 @@ export function DragDropQuestion({
           return (
             <div
               key={zone.id}
-              className={`grid gap-4 rounded-[1.1rem] border px-4 py-4 md:grid-cols-[minmax(0,1fr)_22rem] md:items-center ${wrapperClass}`}
+              className={`grid gap-4 rounded-[1.1rem] border px-4 py-4 md:grid-cols-[minmax(0,1fr)_minmax(18rem,26rem)] md:items-center ${wrapperClass}`}
             >
               <div className="text-base font-semibold text-[color:var(--color-text)]">
                 {zone.label}

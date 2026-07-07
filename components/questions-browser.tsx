@@ -143,7 +143,6 @@ export function QuestionsBrowser() {
             ))}
           </select>
         </div>
-
       </section>
 
       {filtered.length === 0 ? (

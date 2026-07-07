@@ -13,6 +13,7 @@ interface QuestionRendererProps {
   response?: QuestionResponse;
   disabled?: boolean;
   revealAnswer?: boolean;
+  displayTitle?: string;
   onChange: (response: QuestionResponse) => void;
 }
 
@@ -74,6 +75,7 @@ export function QuestionRenderer({
   response,
   disabled,
   revealAnswer,
+  displayTitle,
   onChange,
 }: QuestionRendererProps) {
   const revealedScore = revealAnswer ? scoreQuestion(question, response) : undefined;
@@ -81,6 +83,7 @@ export function QuestionRenderer({
     ? "border-emerald-500/20 bg-emerald-500/8"
     : "border-rose-500/20 bg-rose-500/8";
   const answerLabelClass = revealedScore?.correct ? "text-emerald-500" : "text-rose-400";
+  const heading = displayTitle ?? question.title;
 
   return (
     <article className="space-y-6">
@@ -104,7 +107,7 @@ export function QuestionRenderer({
       </div>
 
       <div className="rounded-[1.75rem] border border-white/10 bg-[color:var(--color-panel)] p-6">
-        <h2 className="text-2xl font-semibold text-[color:var(--color-text)]">{question.title}</h2>
+        <h2 className="text-2xl font-semibold text-[color:var(--color-text)]">{heading}</h2>
         <div className="mt-4 whitespace-pre-wrap text-base leading-8 text-[color:var(--color-text)]">
           {question.questionText}
         </div>
@@ -119,7 +122,7 @@ export function QuestionRenderer({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={asset}
-                  alt={`${question.title} exhibit`}
+                  alt={`${heading} exhibit`}
                   className="w-full rounded-[1rem] object-contain"
                 />
               </div>

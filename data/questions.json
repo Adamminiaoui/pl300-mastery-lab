@@ -244,7 +244,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Option to use to combine the Customer tables",
+        "label": "Answer Area Optiontousetocombinethe Customertables",
         "options": [
           "Append Queries",
           "Append Queries as New",
@@ -255,12 +255,12 @@
       },
       {
         "id": "box-2",
-        "label": "Action to perform on the original two SQL database queries",
+        "label": "Actiontoperformontheoriginaltwo SQ Ldatabasequeries",
         "options": [
-          "Delete the queries",
+          "Deletethequeries",
           "Disable including the query in report refresh",
           "Disable loading the query to the data model",
-          "Duplicate the queries"
+          "Duplicatethequeries"
         ],
         "correctAnswer": "Disable loading the query to the data model"
       }
@@ -697,7 +697,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "How should you combine the queries?",
+        "label": "Box 1",
         "options": [
           "Append",
           "Merge",
@@ -707,11 +707,11 @@
       },
       {
         "id": "box-2",
-        "label": "What should you do on the Categories query?",
+        "label": "Box 2",
         "options": [
-          "Delete the query.",
+          "Deletethequery.",
           "Disable the query load.",
-          "Exclude the query from report refresh."
+          "Excludethequeryfromreportrefresh."
         ],
         "correctAnswer": "Disable the query load."
       }
@@ -1128,7 +1128,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "The default timeout for the connection from Power BI Desktop to the database will be",
+        "label": "Thedefaulttimeoutfortheconnectionfrom Power Bl Desktoptothedatabasewillbe",
         "options": [
           "unlimited",
           "one minute",
@@ -1140,7 +1140,7 @@
         "id": "box-2",
         "label": "The Navigator will display",
         "options": [
-          "all the tables",
+          "all thetables",
           "only tables that contain data",
           "only tables that contain hierarchies"
         ],
@@ -1846,10 +1846,8 @@
     "difficulty": "unknown",
     "multipleCorrect": false,
     "hasImage": true,
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ],
+    "manualReview": false,
+    "manualReviewReasons": [],
     "answerFormat": "dropdown"
   },
   {
@@ -1948,10 +1946,8 @@
     "difficulty": "unknown",
     "multipleCorrect": false,
     "hasImage": true,
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ],
+    "manualReview": false,
+    "manualReviewReasons": [],
     "answerFormat": "dropdown"
   },
   {
@@ -2258,10 +2254,8 @@
     "difficulty": "unknown",
     "multipleCorrect": false,
     "hasImage": true,
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ],
+    "manualReview": false,
+    "manualReviewReasons": [],
     "answerFormat": "dropdown"
   },
   {
@@ -2702,7 +2696,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Changing the [answer choice] setting of the relationships will improve report query performance.",
+        "label": "Answer Area Changing the [answer choke] setting of the relationships will improve report query performance.",
         "options": [
           "Cardinality",
           "Cross filter direction",
@@ -2712,11 +2706,11 @@
       },
       {
         "id": "box-2",
-        "label": "The data model is organized into a [answer choice].",
+        "label": "Thedatamodel isorganized intoa[answerchoice]",
         "options": [
           "star schema",
-          "snowflake schema",
-          "denormalized table"
+          "snowflakeschema",
+          "denormalizedtable"
         ],
         "correctAnswer": "star schema"
       }
@@ -3422,23 +3416,23 @@
         "id": "box-1",
         "label": "Box 1",
         "options": [
-          "Attendance fact",
-          "Class dimension",
-          "Teacher dimension",
-          "Teacher fact"
+          "Attendancefact",
+          "Classdimension",
+          "Teacherdimension",
+          "Teacherfact"
         ],
-        "correctAnswer": "Teacher dimension"
+        "correctAnswer": "Teacherdimension"
       },
       {
         "id": "box-2",
         "label": "Box 2",
         "options": [
-          "Attendance fact",
-          "Class dimension",
-          "Teacher dimension",
-          "Teacher fact"
+          "Attendancefact",
+          "Classdimension",
+          "Teacherdimension",
+          "Teacherfact"
         ],
-        "correctAnswer": "Class dimension"
+        "correctAnswer": "Classdimension"
       }
     ],
     "dragItems": [],
@@ -3581,24 +3575,14 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "When UnitsInStock is added to Values, there will be",
+        "label": "Box 1",
         "options": [
-          "0 rows",
+          "Orows",
           "1 row",
           "51 rows",
           "75 rows"
         ],
         "correctAnswer": "75 rows"
-      },
-      {
-        "id": "box-2",
-        "label": "Changing Summarize by will",
-        "options": [
-          "maintain",
-          "reduce",
-          "increase"
-        ],
-        "correctAnswer": "reduce"
       }
     ],
     "dragItems": [],
@@ -6293,10 +6277,8 @@
     "difficulty": "unknown",
     "multipleCorrect": false,
     "hasImage": true,
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ],
+    "manualReview": false,
+    "manualReviewReasons": [],
     "answerFormat": "dropdown"
   },
   {
@@ -6546,10 +6528,8 @@
     "difficulty": "unknown",
     "multipleCorrect": false,
     "hasImage": true,
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ],
+    "manualReview": false,
+    "manualReviewReasons": [],
     "answerFormat": "dropdown"
   },
   {
@@ -6766,7 +6746,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "To replace all the implicit DAX measures used in the visual, [answer choice] must be created.",
+        "label": "Answer Area To replacealltheimplicit DA Xmeasures used inthevisual, [answerchoice] must becreated.",
         "options": [
           "one explicit measure",
           "two explicit measures",
@@ -6776,7 +6756,7 @@
       },
       {
         "id": "box-2",
-        "label": "To change how the Product Cost field is aggregated in additional visuals, you must change the [answer choice].",
+        "label": "Tochangehowthe Product Costfieldisaggregated in additionalvisuals, youmustchangethe[answerchoice].",
         "options": [
           "data category",
           "datatype",
@@ -8040,25 +8020,14 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Identifying additional factors that increase attrition can be achieved by",
+        "label": "Answer Area",
         "options": [
           "turning on Cross-report",
-          "adding more fields to Explain by",
-          "adding more fields to Expand by",
+          "addingmorefieldsto Explainby",
+          "adding morefieldsto Expand by",
           "moving fields from Explain by to Expand by"
         ],
-        "correctAnswer": "adding more fields to Explain by"
-      },
-      {
-        "id": "box-2",
-        "label": "Employee attrition is ... times greater when employees work overtime",
-        "options": [
-          "0.11",
-          ".2",
-          "1",
-          "3"
-        ],
-        "correctAnswer": "3"
+        "correctAnswer": "addingmorefieldsto Explainby"
       }
     ],
     "dragItems": [],
@@ -8770,7 +8739,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Selecting a quarter on the line chart will [answer choice] the clustered column chart.",
+        "label": "Answer Area Selecting a quarter on the line chart will[answer choice] the clustered column chart.",
         "options": [
           "cross-filter",
           "cross-highlight",
@@ -8780,7 +8749,7 @@
       },
       {
         "id": "box-2",
-        "label": "Selecting a quarter on the line chart will [answer choice] the map.",
+        "label": "Box 2",
         "options": [
           "cross-filter",
           "cross-highlight",
@@ -9124,12 +9093,12 @@
         "id": "box-1",
         "label": "Box 1",
         "options": [
-          "are 20 values that occur",
-          "are 365 values that occur",
+          "are 20 valuesthatoccur",
+          "are 365 valuesthatoccur",
           "are 277, 329 values that occur",
-          "is one value that occurs"
+          "isonevaluethatoccurs"
         ],
-        "correctAnswer": "are 20 values that occur"
+        "correctAnswer": "are 20 valuesthatoccur"
       },
       {
         "id": "box-2",
@@ -9283,7 +9252,7 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Visual type",
+        "label": "Box 1",
         "options": [
           "Line",
           "Pie",
@@ -9293,13 +9262,13 @@
       },
       {
         "id": "box-2",
-        "label": "Required configuration",
+        "label": "Box 2",
         "options": [
-          "Select the Show value as option",
+          "Selectthe Showvalueas option",
           "Enable Cross-report drill-through",
-          "Populate the axis with a date field"
+          "Populatetheaxis withadatefield"
         ],
-        "correctAnswer": "Populate the axis with a date field"
+        "correctAnswer": "Populatetheaxis withadatefield"
       }
     ],
     "dragItems": [],
@@ -9949,22 +9918,12 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "The visual type is",
-        "options": [
-          "a line",
-          "a line and clustered column",
-          "an area"
-        ],
-        "correctAnswer": "a line"
-      },
-      {
-        "id": "box-2",
-        "label": "The visual indicators are created by using",
+        "label": "Box 1",
         "options": [
           "a custom visual",
           "a trendline",
           "anomaly detection",
-          "line chart markers"
+          "linechartmarkers"
         ],
         "correctAnswer": "anomaly detection"
       }
@@ -10369,23 +10328,23 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Visualization to use",
+        "label": "Box 1",
         "options": [
-          "A column chart of Quantity Ordered and Unit Price by year",
-          "A line chart of Quantity Ordered and Unit Price by item",
-          "A scatter plot of Quantity Ordered and Unit Price by item"
+          "Acolumnchartof Quantity Orderedand Unit Pricebyyear",
+          "Alinechartof Quantity Orderedand Unit Priceby item",
+          "Ascatterplotof Quantity Orderedand Unit Pricebyitem"
         ],
-        "correctAnswer": "A scatter plot of Quantity Ordered and Unit Price by item"
+        "correctAnswer": "Ascatterplotof Quantity Orderedand Unit Pricebyitem"
       },
       {
         "id": "box-2",
-        "label": "Feature to enable",
+        "label": "Box 2",
         "options": [
-          "Automatically find clusters",
+          "Automaticallyfindclusters",
           "Explain the decrease",
-          "Find where the distribution is different"
+          "Find wherethedistribution is different"
         ],
-        "correctAnswer": "Automatically find clusters"
+        "correctAnswer": "Automaticallyfindclusters"
       }
     ],
     "dragItems": [],
@@ -12469,7 +12428,17 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Box 1",
+        "label": "Values that occur only once in Resource Location",
+        "options": [
+          "0",
+          "13",
+          "2,863"
+        ],
+        "correctAnswer": "0"
+      },
+      {
+        "id": "box-2",
+        "label": "Value that occurs most frequently",
         "options": [
           "EU North",
           "Middle East And Africa",
@@ -12481,7 +12450,7 @@
     ],
     "dragItems": [],
     "dropZones": [],
-    "explanation": "0\n\nUS East",
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: 0; US East.",
     "references": [],
     "assets": [
       "/question-assets/q235-p1.webp",
@@ -13862,23 +13831,13 @@
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "Users in the finance group can",
+        "label": "Box 1",
         "options": [
-          "assign sensitivity labels to",
-          "use Analyze in Excel with",
-          "delete"
-        ],
-        "correctAnswer": "use Analyze in Excel with"
-      },
-      {
-        "id": "box-2",
-        "label": "Users in the corp group can",
-        "options": [
-          "grant the Build permission for",
+          "grantthe Buildpermissionfor",
           "grant the Read permission for",
-          "remove a table from"
+          "removeatablefrom"
         ],
-        "correctAnswer": "grant the Build permission for"
+        "correctAnswer": "grant the Read permission for"
       }
     ],
     "dragItems": [],
@@ -15375,14 +15334,14 @@
       },
       {
         "id": "box-3",
-        "label": "COUNTROWS(Orders'), ( Order 5, FILTER",
+        "label": "Late order condition",
         "options": [
           "Orders[Order Date] > Orders[Required Date]",
           "Orders[Shipped Date] >=Orders[Order Date]",
           "Orders[Shipped Date] <Orders[Required Date]",
           "Orders[Shipped Date] >Orders[Required Date]"
         ],
-        "correctAnswer": "Orders[Shipped Date] <Orders[Required Date]"
+        "correctAnswer": "Orders[Shipped Date] >Orders[Required Date]"
       }
     ],
     "dragItems": [],
@@ -15545,14 +15504,14 @@
       },
       {
         "id": "box-2",
-        "label": "Create a one-to-one",
+        "label": "Createa one-to-one",
         "options": [
-          "Orders table",
-          "Suppliers table",
-          "Order Details table",
-          "Customer Details worksheet"
+          "Orderstable",
+          "Supplierstable",
+          "Order Detailstable",
+          "Customer Detailsworksheet"
         ],
-        "correctAnswer": "Customer Details worksheet"
+        "correctAnswer": "Customer Detailsworksheet"
       }
     ],
     "dragItems": [],

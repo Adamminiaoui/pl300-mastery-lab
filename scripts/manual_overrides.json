@@ -5,31 +5,19 @@
       {
         "id": "box-1",
         "label": "Employee review data",
-        "options": [
-          "None",
-          "Organizational",
-          "Private",
-          "Public"
-        ],
+        "options": ["None", "Organizational", "Private", "Public"],
         "correctAnswer": "Private"
       },
       {
         "id": "box-2",
         "label": "Sales opportunities",
-        "options": [
-          "None",
-          "Organizational",
-          "Private",
-          "Public"
-        ],
+        "options": ["None", "Organizational", "Private", "Public"],
         "correctAnswer": "Organizational"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Employee review data = Private; Sales opportunities = Organizational.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "35": {
     "type": "dropdown",
@@ -37,29 +25,19 @@
       {
         "id": "box-1",
         "label": "To configure the query to start on row 3",
-        "options": [
-          "Keep top rows",
-          "Remove errors",
-          "Remove top rows"
-        ],
+        "options": ["Keep top rows", "Remove errors", "Remove top rows"],
         "correctAnswer": "Remove top rows"
       },
       {
         "id": "box-2",
         "label": "To use the values in row 3 as the column names",
-        "options": [
-          "Rename",
-          "Replace values",
-          "Use first row as headers"
-        ],
+        "options": ["Rename", "Replace values", "Use first row as headers"],
         "correctAnswer": "Use first row as headers"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Remove top rows; Use first row as headers.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "42": {
     "type": "dropdown",
@@ -67,31 +45,19 @@
       {
         "id": "box-1",
         "label": "Fact table",
-        "options": [
-          "Date",
-          "Patient",
-          "Test",
-          "Test Result"
-        ],
+        "options": ["Date", "Patient", "Test", "Test Result"],
         "correctAnswer": "Test Result"
       },
       {
         "id": "box-2",
         "label": "Surrogate key",
-        "options": [
-          "Date of birth",
-          "Last name",
-          "Patient key",
-          "Patient source ID"
-        ],
+        "options": ["Date of birth", "Last name", "Patient key", "Patient source ID"],
         "correctAnswer": "Patient key"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Fact table = Test Result; Surrogate key = Patient key.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "116": {
     "type": "dropdown",
@@ -99,29 +65,19 @@
       {
         "id": "box-1",
         "label": "Function to build the calculated table",
-        "options": [
-          "ROLLUP",
-          "SELECTCOLUMNS",
-          "SUMMARIZE"
-        ],
+        "options": ["ROLLUP", "SELECTCOLUMNS", "SUMMARIZE"],
         "correctAnswer": "SUMMARIZE"
       },
       {
         "id": "box-2",
         "label": "Column to group by",
-        "options": [
-          "Date[Date]",
-          "Date[Year]",
-          "Sales[Date]"
-        ],
+        "options": ["Date[Date]", "Date[Year]", "Sales[Date]"],
         "correctAnswer": "Date[Year]"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: SUMMARIZE; Date[Year].",
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReview": false,
+    "manualReviewReasons": []
   },
   "121": {
     "type": "dropdown",
@@ -140,44 +96,22 @@
       {
         "id": "box-2",
         "label": "Clear Enable data load for",
-        "options": [
-          "All Sales",
-          "Customer Dimension",
-          "Product Dimension",
-          "Sales Fact"
-        ],
+        "options": ["All Sales", "Customer Dimension", "Product Dimension", "Sales Fact"],
         "correctAnswer": "All Sales"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Reference the All Sales query; All Sales.",
-    "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReview": false,
+    "manualReviewReasons": []
   },
   "129": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "inner",
-        "text": "Inner"
-      },
-      {
-        "id": "left-anti",
-        "text": "Left anti"
-      },
-      {
-        "id": "left-outer",
-        "text": "Left outer"
-      },
-      {
-        "id": "right-anti",
-        "text": "Right anti"
-      },
-      {
-        "id": "right-outer",
-        "text": "Right outer"
-      }
+      { "id": "inner", "text": "Inner" },
+      { "id": "left-anti", "text": "Left anti" },
+      { "id": "left-outer", "text": "Left outer" },
+      { "id": "right-anti", "text": "Right anti" },
+      { "id": "right-outer", "text": "Right outer" }
     ],
     "dropZones": [
       {
@@ -193,9 +127,7 @@
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Correct mapping: Join Customers with Address = Right outer; Join Address with Country = Inner.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "131": {
     "type": "dropdown",
@@ -203,30 +135,19 @@
       {
         "id": "box-1",
         "label": "The tables represent a [answer choice] dimension",
-        "options": [
-          "degenerate",
-          "junk",
-          "role-playing",
-          "snowflake"
-        ],
+        "options": ["degenerate", "junk", "role-playing", "snowflake"],
         "correctAnswer": "snowflake"
       },
       {
         "id": "box-2",
         "label": "[answer choice] is the only table that supports a hierarchy model for DimOrgVertical",
-        "options": [
-          "DimOrganizations",
-          "DimOrgSubVertical",
-          "FactSales"
-        ],
+        "options": ["DimOrganizations", "DimOrgSubVertical", "FactSales"],
         "correctAnswer": "DimOrgSubVertical"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: snowflake; DimOrgSubVertical.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "132": {
     "type": "dropdown",
@@ -234,40 +155,25 @@
       {
         "id": "box-1",
         "label": "Outer function",
-        "options": [
-          "ELSE",
-          "IF",
-          "IF.EAGER",
-          "OR"
-        ],
+        "options": ["ELSE", "IF", "IF.EAGER", "OR"],
         "correctAnswer": "IF.EAGER"
       },
       {
         "id": "box-2",
         "label": "Value when Qualification > 0.7",
-        "options": [
-          "HIGH",
-          "LOW",
-          "MEDIUM"
-        ],
+        "options": ["HIGH", "LOW", "MEDIUM"],
         "correctAnswer": "HIGH"
       },
       {
         "id": "box-3",
         "label": "Value for remaining cases",
-        "options": [
-          "HIGH",
-          "LOW",
-          "MEDIUM"
-        ],
+        "options": ["HIGH", "LOW", "MEDIUM"],
         "correctAnswer": "MEDIUM"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: IF.EAGER; HIGH; MEDIUM.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "134": {
     "type": "dropdown",
@@ -275,31 +181,19 @@
       {
         "id": "box-1",
         "label": "Function before ('Item'[Item])",
-        "options": [
-          "CALCULATE",
-          "HASONEVALUE",
-          "SELECTEDVALUE",
-          "WINDOW"
-        ],
+        "options": ["CALCULATE", "HASONEVALUE", "SELECTEDVALUE", "WINDOW"],
         "correctAnswer": "SELECTEDVALUE"
       },
       {
         "id": "box-2",
         "label": "RANKX ties parameter",
-        "options": [
-          "DEFAULT",
-          "DENSE",
-          "FIRST",
-          "SKIP"
-        ],
+        "options": ["DEFAULT", "DENSE", "FIRST", "SKIP"],
         "correctAnswer": "DENSE"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: SELECTEDVALUE; DENSE.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "135": {
     "type": "dropdown",
@@ -317,19 +211,13 @@
       {
         "id": "box-2",
         "label": "Function to hide CountryOrRegion",
-        "options": [
-          "Table.RemoveColumns",
-          "Table.ReorderColumns",
-          "Table.RemoveRows"
-        ],
+        "options": ["Table.RemoveColumns", "Table.ReorderColumns", "Table.RemoveRows"],
         "correctAnswer": "Table.RemoveColumns"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Table.ExpandListColumn; Table.RemoveColumns.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "136": {
     "type": "dropdown",
@@ -337,11 +225,7 @@
       {
         "id": "box-1",
         "label": "Cross filter direction for the many-to-one relationship",
-        "options": [
-          "Both",
-          "None",
-          "Single"
-        ],
+        "options": ["Both", "None", "Single"],
         "correctAnswer": "Single"
       },
       {
@@ -357,9 +241,7 @@
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Single; define the relationship as active.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "141": {
     "type": "dropdown",
@@ -388,9 +270,7 @@
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Change Data Type of OrderID to Whole Number; Delete the OrderTitle and OrderDescription columns.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "227": {
     "type": "dropdown",
@@ -398,36 +278,25 @@
       {
         "id": "box-1",
         "label": "A user can change a bar chart to a pie chart in the Sales report.",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "correctAnswer": "Yes"
       },
       {
         "id": "box-2",
         "label": "A user can reshare their modified visuals with users outside of the sales department.",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "correctAnswer": "No"
       },
       {
         "id": "box-3",
         "label": "A user can create a new quick measure and add it to a visual.",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "correctAnswer": "No"
       }
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Yes; No; No.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "229": {
     "type": "dropdown",
@@ -455,9 +324,7 @@
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Report1 = Microsoft SQL Server Reporting Services (SSRS) (.rdlc); Report2 = Power BI (.pbix).",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "232": {
     "type": "dropdown",
@@ -465,11 +332,7 @@
       {
         "id": "box-1",
         "label": "Type",
-        "options": [
-          "Matrix",
-          "Multi-row card",
-          "Table"
-        ],
+        "options": ["Matrix", "Multi-row card", "Table"],
         "correctAnswer": "Matrix"
       },
       {
@@ -485,9 +348,7 @@
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: Matrix; Set Switch values to rows to On.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "271": {
     "type": "dropdown",
@@ -515,9 +376,7 @@
     ],
     "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: assign sensitivity labels to; grant the Read permission for.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "296": {
     "type": "dropdown",
@@ -525,165 +384,67 @@
       {
         "id": "box-1",
         "label": "You need an on-premises data gateway to refresh the dataset.",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "correctAnswer": "No"
       },
       {
         "id": "box-2",
         "label": "You need to configure a scheduled refresh of the dataset.",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "correctAnswer": "No"
       },
       {
         "id": "box-3",
         "label": "You can use Basic authentication on the dataset to connect to the data.",
-        "options": [
-          "Yes",
-          "No"
-        ],
+        "options": ["Yes", "No"],
         "correctAnswer": "No"
       }
     ],
     "explanation": "Recovered from the annotated answer area image and adjacent explanation text in the source PDF. All three statements are marked No.",
     "manualReview": true,
-    "manualReviewReasons": [
-      "image-only-answer-recovered"
-    ]
+    "manualReviewReasons": ["image-only-answer-recovered"]
   },
   "6": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Full outer"
-      },
-      {
-        "id": "item-2",
-        "text": "Inner"
-      },
-      {
-        "id": "item-3",
-        "text": "Left anti"
-      },
-      {
-        "id": "item-4",
-        "text": "Left outer"
-      },
-      {
-        "id": "item-5",
-        "text": "Right anti"
-      },
-      {
-        "id": "item-6",
-        "text": "Right outer"
-      }
+      { "id": "item-1", "text": "Full outer" },
+      { "id": "item-2", "text": "Inner" },
+      { "id": "item-3", "text": "Left anti" },
+      { "id": "item-4", "text": "Left outer" },
+      { "id": "item-5", "text": "Right anti" },
+      { "id": "item-6", "text": "Right outer" }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Join Product to ProductSubCategory",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-2",
-        "label": "Join ProductSubCategory to ProductCategory",
-        "correctItemId": "item-4"
-      }
+      { "id": "zone-1", "label": "Join Product to ProductSubCategory", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Join ProductSubCategory to ProductCategory", "correctItemId": "item-4" }
     ]
   },
   "12": {
     "type": "dropdown",
     "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "There are [answer choice] different values in State including nulls.",
-        "options": [
-          "4",
-          "65",
-          "69",
-          "73"
-        ],
-        "correctAnswer": "69"
-      },
-      {
-        "id": "box-2",
-        "label": "There are [answer choice] non-null values that occur only once in State.",
-        "options": [
-          "4",
-          "65",
-          "69",
-          "73"
-        ],
-        "correctAnswer": "4"
-      }
+      { "id": "box-1", "label": "There are [answer choice] different values in State including nulls.", "options": ["4", "65", "69", "73"], "correctAnswer": "69" },
+      { "id": "box-2", "label": "There are [answer choice] non-null values that occur only once in State.", "options": ["4", "65", "69", "73"], "correctAnswer": "4" }
     ]
   },
   "96": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "ALL"
-      },
-      {
-        "id": "item-2",
-        "text": "ALLSELECTED"
-      },
-      {
-        "id": "item-3",
-        "text": "CALCULATE"
-      },
-      {
-        "id": "item-4",
-        "text": "FILTER"
-      },
-      {
-        "id": "item-5",
-        "text": "SELECTEDVALUE"
-      }
+      { "id": "item-1", "text": "ALL" },
+      { "id": "item-2", "text": "ALLSELECTED" },
+      { "id": "item-3", "text": "CALCULATE" },
+      { "id": "item-4", "text": "FILTER" },
+      { "id": "item-5", "text": "SELECTEDVALUE" }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Box 1",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-2",
-        "label": "Box 2",
-        "correctItemId": "item-2"
-      }
+      { "id": "zone-1", "label": "Box 1", "correctItemId": "item-3" },
+      { "id": "zone-2", "label": "Box 2", "correctItemId": "item-2" }
     ]
   },
   "99": {
     "type": "dropdown",
     "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Box 1",
-        "options": [
-          "IF",
-          "SWITCH",
-          "TRUE"
-        ],
-        "correctAnswer": "IF"
-      },
-      {
-        "id": "box-2",
-        "label": "Box 2",
-        "options": [
-          "&",
-          "&&",
-          "+"
-        ],
-        "correctAnswer": "&"
-      }
+      { "id": "box-1", "label": "Box 1", "options": ["IF", "SWITCH", "TRUE"], "correctAnswer": "IF" },
+      { "id": "box-2", "label": "Box 2", "options": ["&", "&&", "+"], "correctAnswer": "&" }
     ]
   },
   "105": {
@@ -703,12 +464,7 @@
       {
         "id": "box-2",
         "label": "Box 2",
-        "options": [
-          "'Sales'",
-          "'Product'",
-          "'Product'[ProductCategory]",
-          "'Date'"
-        ],
+        "options": ["'Sales'", "'Product'", "'Product'[ProductCategory]", "'Date'"],
         "correctAnswer": "'Sales'"
       }
     ]
@@ -716,127 +472,46 @@
   "110": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "[Country]=\"USA\""
-      },
-      {
-        "id": "item-2",
-        "text": "[Email]=USERPRINCIPALNAME()"
-      },
-      {
-        "id": "item-3",
-        "text": "[Manager]=\"CFO\""
-      },
-      {
-        "id": "item-4",
-        "text": "FALSE()"
-      },
-      {
-        "id": "item-5",
-        "text": "TRUE()"
-      }
+      { "id": "item-1", "text": "[Country]=\"USA\"" },
+      { "id": "item-2", "text": "[Email]=USERPRINCIPALNAME()" },
+      { "id": "item-3", "text": "[Manager]=\"CFO\"" },
+      { "id": "item-4", "text": "FALSE()" },
+      { "id": "item-5", "text": "TRUE()" }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Human Resources",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-2",
-        "label": "Country",
-        "correctItemId": "item-3"
-      }
+      { "id": "zone-1", "label": "Human Resources", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Country", "correctItemId": "item-3" }
     ]
   },
   "146": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Select the [Department] and [Stage] columns and unpivot the other columns."
-      },
-      {
-        "id": "item-2",
-        "text": "Select and unpivot the [Department] and [Stage] columns."
-      },
-      {
-        "id": "item-3",
-        "text": "Group by [Department] and [School] and create a new column named [Avg Score] that uses the AVERAGE function on the [Score] column."
-      },
-      {
-        "id": "item-4",
-        "text": "Rename the [Attribute] column as [School] and the [Value] column as [Score]."
-      },
-      {
-        "id": "item-5",
-        "text": "Group by [Department], [School1], [School2], [School3], [School4] and create a new column named [Avg Score] that uses the AVERAGE function on the [Stage] column."
-      }
+      { "id": "item-1", "text": "Select the [Department] and [Stage] columns and unpivot the other columns." },
+      { "id": "item-2", "text": "Select and unpivot the [Department] and [Stage] columns." },
+      { "id": "item-3", "text": "Group by [Department] and [School] and create a new column named [Avg Score] that uses the AVERAGE function on the [Score] column." },
+      { "id": "item-4", "text": "Rename the [Attribute] column as [School] and the [Value] column as [Score]." },
+      { "id": "item-5", "text": "Group by [Department], [School1], [School2], [School3], [School4] and create a new column named [Avg Score] that uses the AVERAGE function on the [Stage] column." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-1"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-3"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-3" }
     ]
   },
   "159": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Pin items from the reports to the dashboard."
-      },
-      {
-        "id": "item-2",
-        "text": "Open the dashboard."
-      },
-      {
-        "id": "item-3",
-        "text": "Create a phone layout for the existing reports."
-      },
-      {
-        "id": "item-4",
-        "text": "Edit the Dashboard mobile view."
-      },
-      {
-        "id": "item-5",
-        "text": "Rearrange, resize, or remove items from the mobile layout."
-      }
+      { "id": "item-1", "text": "Pin items from the reports to the dashboard." },
+      { "id": "item-2", "text": "Open the dashboard." },
+      { "id": "item-3", "text": "Create a phone layout for the existing reports." },
+      { "id": "item-4", "text": "Edit the Dashboard mobile view." },
+      { "id": "item-5", "text": "Rearrange, resize, or remove items from the mobile layout." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-1"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-4",
-        "label": "Step 4",
-        "correctItemId": "item-5"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-2" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-4" },
+      { "id": "zone-4", "label": "Step 4", "correctItemId": "item-5" }
     ]
   },
   "188": {
@@ -845,23 +520,13 @@
       {
         "id": "box-1",
         "label": "The dashed line representing the Year Average Employee Count was created by using [answer choice].",
-        "options": [
-          "a trend line",
-          "a secondary axis",
-          "an average reference line",
-          "two measures in the Values bucket"
-        ],
+        "options": ["a trend line", "a secondary axis", "an average reference line", "two measures in the Values bucket"],
         "correctAnswer": "an average reference line"
       },
       {
         "id": "box-2",
         "label": "To enable users to drill down to weeks or days, add the Weeks and Days field to the [answer choice] bucket.",
-        "options": [
-          "Axis",
-          "Values",
-          "Legend",
-          "Secondary values"
-        ],
+        "options": ["Axis", "Values", "Legend", "Secondary values"],
         "correctAnswer": "Axis"
       }
     ]
@@ -869,341 +534,122 @@
   "205": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Add a Bookmark navigator button."
-      },
-      {
-        "id": "item-2",
-        "text": "Change the Bookmark property for the button."
-      },
-      {
-        "id": "item-3",
-        "text": "Group the other two bookmarks."
-      },
-      {
-        "id": "item-4",
-        "text": "Group the three bookmarks."
-      }
+      { "id": "item-1", "text": "Add a Bookmark navigator button." },
+      { "id": "item-2", "text": "Change the Bookmark property for the button." },
+      { "id": "item-3", "text": "Group the other two bookmarks." },
+      { "id": "item-4", "text": "Group the three bookmarks." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "First step",
-        "correctItemId": "item-1"
-      },
-      {
-        "id": "zone-2",
-        "label": "Second step",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-3",
-        "label": "Third step",
-        "correctItemId": "item-2"
-      }
+      { "id": "zone-1", "label": "First step", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Second step", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "Third step", "correctItemId": "item-2" }
     ]
   },
   "207": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Add the Country field to the filters on all the pages."
-      },
-      {
-        "id": "item-2",
-        "text": "Configure the Country slicer to sync across all the pages."
-      },
-      {
-        "id": "item-3",
-        "text": "Configure the Country slicer to sync only on the second and third pages."
-      },
-      {
-        "id": "item-4",
-        "text": "Hide the Country slicer on the second and third pages."
-      }
+      { "id": "item-1", "text": "Add the Country field to the filters on all the pages." },
+      { "id": "item-2", "text": "Configure the Country slicer to sync across all the pages." },
+      { "id": "item-3", "text": "Configure the Country slicer to sync only on the second and third pages." },
+      { "id": "item-4", "text": "Hide the Country slicer on the second and third pages." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "When a user selects a country on the first page, the report must filter the other pages.",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-2",
-        "label": "The second and third pages must display only the filtered results.",
-        "correctItemId": "item-4"
-      }
+      { "id": "zone-1", "label": "When a user selects a country on the first page, the report must filter the other pages.", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "The second and third pages must display only the filtered results.", "correctItemId": "item-4" }
     ]
   },
   "211": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Image Tagging"
-      },
-      {
-        "id": "item-2",
-        "text": "Key Phrase Extraction"
-      },
-      {
-        "id": "item-3",
-        "text": "Language Detection"
-      },
-      {
-        "id": "item-4",
-        "text": "Sentiment Analysis"
-      }
+      { "id": "item-1", "text": "Image Tagging" },
+      { "id": "item-2", "text": "Key Phrase Extraction" },
+      { "id": "item-3", "text": "Language Detection" },
+      { "id": "item-4", "text": "Sentiment Analysis" }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "What the customers most often provide feedback about",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-2",
-        "label": "Whether the customers like your company's product",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-3",
-        "label": "The language of the feedback",
-        "correctItemId": "item-3"
-      }
+      { "id": "zone-1", "label": "What the customers most often provide feedback about", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Whether the customers like your company's product", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "The language of the feedback", "correctItemId": "item-3" }
     ]
   },
   "265": {
     "type": "ordering",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Configure a scheduled refresh"
-      },
-      {
-        "id": "item-2",
-        "text": "Configure a virtual network data gateway"
-      },
-      {
-        "id": "item-3",
-        "text": "Add the dataset owner to the data source"
-      },
-      {
-        "id": "item-4",
-        "text": "Add a data source"
-      },
-      {
-        "id": "item-5",
-        "text": "Configure an on-premises data gateway"
-      }
+      { "id": "item-1", "text": "Configure a scheduled refresh" },
+      { "id": "item-2", "text": "Configure a virtual network data gateway" },
+      { "id": "item-3", "text": "Add the dataset owner to the data source" },
+      { "id": "item-4", "text": "Add a data source" },
+      { "id": "item-5", "text": "Configure an on-premises data gateway" }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-5"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-4",
-        "label": "Step 4",
-        "correctItemId": "item-1"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-5" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-4" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-3" },
+      { "id": "zone-4", "label": "Step 4", "correctItemId": "item-1" }
     ]
   },
   "76": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Select Department and Product and Unpivot Columns."
-      },
-      {
-        "id": "item-2",
-        "text": "Select Use First Row as Headers."
-      },
-      {
-        "id": "item-3",
-        "text": "Select Department and Product and Unpivot Other Columns."
-      },
-      {
-        "id": "item-4",
-        "text": "Rename the Attribute column to Year and the Value column to Revenue."
-      },
-      {
-        "id": "item-5",
-        "text": "Select Use Header as First Row."
-      },
-      {
-        "id": "item-6",
-        "text": "Rename the Attribute column to Revenue and the Value column to Year."
-      }
+      { "id": "item-1", "text": "Select Department and Product and Unpivot Columns." },
+      { "id": "item-2", "text": "Select Use First Row as Headers." },
+      { "id": "item-3", "text": "Select Department and Product and Unpivot Other Columns." },
+      { "id": "item-4", "text": "Rename the Attribute column to Year and the Value column to Revenue." },
+      { "id": "item-5", "text": "Select Use Header as First Row." },
+      { "id": "item-6", "text": "Rename the Attribute column to Revenue and the Value column to Year." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-4"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-2" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-3" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-4" }
     ]
   },
   "156": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "From Focus mode, pin the relevant visuals to DashboardA."
-      },
-      {
-        "id": "item-2",
-        "text": "From Focus mode, review the generated visuals."
-      },
-      {
-        "id": "item-3",
-        "text": "From DashboardA, select the TileA options, and then select View insights."
-      },
-      {
-        "id": "item-4",
-        "text": "From ReportA, select the treemap visual options, and then select Spotlight."
-      },
-      {
-        "id": "item-5",
-        "text": "From ReportA, select Get Insights."
-      },
-      {
-        "id": "item-6",
-        "text": "From DashboardA, select TileA to open ReportA."
-      }
+      { "id": "item-1", "text": "From Focus mode, pin the relevant visuals to DashboardA." },
+      { "id": "item-2", "text": "From Focus mode, review the generated visuals." },
+      { "id": "item-3", "text": "From DashboardA, select the TileA options, and then select View insights." },
+      { "id": "item-4", "text": "From ReportA, select the treemap visual options, and then select Spotlight." },
+      { "id": "item-5", "text": "From ReportA, select Get Insights." },
+      { "id": "item-6", "text": "From DashboardA, select TileA to open ReportA." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-1"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-3" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-2" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-1" }
     ]
   },
   "245": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Open Power BI Desktop."
-      },
-      {
-        "id": "item-2",
-        "text": "Pin the page."
-      },
-      {
-        "id": "item-3",
-        "text": "Pin each visual."
-      },
-      {
-        "id": "item-4",
-        "text": "Open powerbi.com."
-      },
-      {
-        "id": "item-5",
-        "text": "Open the Sales report."
-      },
-      {
-        "id": "item-6",
-        "text": "Create a new report."
-      }
+      { "id": "item-1", "text": "Open Power BI Desktop." },
+      { "id": "item-2", "text": "Pin the page." },
+      { "id": "item-3", "text": "Pin each visual." },
+      { "id": "item-4", "text": "Open powerbi.com." },
+      { "id": "item-5", "text": "Open the Sales report." },
+      { "id": "item-6", "text": "Create a new report." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-5"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-2"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-4" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-5" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-2" }
     ]
   },
   "15": {
     "type": "select_place",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "From Power BI Desktop, select Get Data, and then select Folder."
-      },
-      {
-        "id": "item-2",
-        "text": "From Power Query Editor, expand the Attributes column."
-      },
-      {
-        "id": "item-3",
-        "text": "From Power Query Editor, remove the Content column."
-      },
-      {
-        "id": "item-4",
-        "text": "From Power Query Editor, remove the Attributes column."
-      },
-      {
-        "id": "item-5",
-        "text": "From Power BI Desktop, select Get Data, and then select Text/CSV."
-      },
-      {
-        "id": "item-6",
-        "text": "From Power Query Editor, combine the Content column."
-      }
+      { "id": "item-1", "text": "From Power BI Desktop, select Get Data, and then select Folder." },
+      { "id": "item-2", "text": "From Power Query Editor, expand the Attributes column." },
+      { "id": "item-3", "text": "From Power Query Editor, remove the Content column." },
+      { "id": "item-4", "text": "From Power Query Editor, remove the Attributes column." },
+      { "id": "item-5", "text": "From Power BI Desktop, select Get Data, and then select Text/CSV." },
+      { "id": "item-6", "text": "From Power Query Editor, combine the Content column." }
     ],
     "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-1"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-2"
-      }
+      { "id": "zone-1", "label": "Step 1", "correctItemId": "item-1" },
+      { "id": "zone-2", "label": "Step 2", "correctItemId": "item-3" },
+      { "id": "zone-3", "label": "Step 3", "correctItemId": "item-2" }
     ]
   },
   "24": {
@@ -1212,21 +658,13 @@
       {
         "id": "box-1",
         "label": "The error is caused by [answer choice].",
-        "options": [
-          "error values in the source data",
-          "mismatched data types",
-          "NULL values"
-        ],
+        "options": ["error values in the source data", "mismatched data types", "NULL values"],
         "correctAnswer": "mismatched data types"
       },
       {
         "id": "box-2",
         "label": "The desired outcome of the custom column is [answer choice].",
-        "options": [
-          "1A",
-          "A&1",
-          "A1"
-        ],
+        "options": ["1A", "A&1", "A1"],
         "correctAnswer": "A1"
       }
     ]
@@ -1234,26 +672,11 @@
   "223": {
     "type": "drag_drop",
     "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Area chart"
-      },
-      {
-        "id": "item-2",
-        "text": "Funnel chart"
-      },
-      {
-        "id": "item-3",
-        "text": "Multi-row card"
-      },
-      {
-        "id": "item-4",
-        "text": "Pie chart"
-      },
-      {
-        "id": "item-5",
-        "text": "Stacked bar chart"
-      }
+      { "id": "item-1", "text": "Area chart" },
+      { "id": "item-2", "text": "Funnel chart" },
+      { "id": "item-3", "text": "Multi-row card" },
+      { "id": "item-4", "text": "Pie chart" },
+      { "id": "item-5", "text": "Stacked bar chart" }
     ],
     "dropZones": [
       {
@@ -1549,6 +972,26 @@
       }
     ]
   },
+  "9": {
+    "type": "select_place",
+    "dropZones": [
+      {
+        "id": "zone-1",
+        "label": "Step 1",
+        "correctItemId": "item-3"
+      },
+      {
+        "id": "zone-2",
+        "label": "Step 2",
+        "correctItemId": "item-4"
+      },
+      {
+        "id": "zone-3",
+        "label": "Step 3",
+        "correctItemId": "item-1"
+      }
+    ]
+  },
   "19": {
     "type": "ordering",
     "dragItems": [
@@ -1638,48 +1081,6 @@
       }
     ]
   },
-  "166": {
-    "type": "select_place",
-    "dragItems": [
-      {
-        "id": "item-1",
-        "text": "From Excel, format the data in Excel1 as a table."
-      },
-      {
-        "id": "item-2",
-        "text": "From powerbi.com, import Excel1 as a dataset."
-      },
-      {
-        "id": "item-3",
-        "text": "From powerbi.com, add a tile for the Excel1 dataset to DashboardA."
-      },
-      {
-        "id": "item-4",
-        "text": "From Excel, create a named range by using the data in Excel1."
-      },
-      {
-        "id": "item-5",
-        "text": "From powerbi.com, upload Excel1."
-      }
-    ],
-    "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-1"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-3"
-      }
-    ]
-  },
   "54": {
     "type": "select_place",
     "acceptAnyOrder": true,
@@ -1728,64 +1129,6 @@
         "id": "zone-3",
         "label": "Step 3",
         "correctItemId": "item-7"
-      }
-    ]
-  },
-  "9": {
-    "type": "select_place",
-    "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-4"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-1"
-      }
-    ]
-  },
-  "202": {
-    "type": "ordering",
-    "dragItems": [
-      {
-        "id": "item-1",
-        "text": "Add and configure a new rule for each value range."
-      },
-      {
-        "id": "item-2",
-        "text": "Set Format style to Rules."
-      },
-      {
-        "id": "item-3",
-        "text": "Open the Background color dialog for the Revenue column."
-      },
-      {
-        "id": "item-4",
-        "text": "Open the Font color dialog for the Revenue column."
-      }
-    ],
-    "dropZones": [
-      {
-        "id": "zone-1",
-        "label": "Step 1",
-        "correctItemId": "item-3"
-      },
-      {
-        "id": "zone-2",
-        "label": "Step 2",
-        "correctItemId": "item-2"
-      },
-      {
-        "id": "zone-3",
-        "label": "Step 3",
-        "correctItemId": "item-1"
       }
     ]
   },
@@ -1844,376 +1187,131 @@
       }
     ]
   },
-  "5": {
-    "dropdowns": [
+  "166": {
+    "type": "select_place",
+    "dragItems": [
       {
-        "id": "box-1",
-        "label": "Option to use to combine the Customer tables",
-        "options": [
-          "Append Queries",
-          "Append Queries as New",
-          "Merge Queries",
-          "Merge Queries as New"
-        ],
-        "correctAnswer": "Append Queries as New"
+        "id": "item-1",
+        "text": "From Excel, format the data in Excel1 as a table."
       },
       {
-        "id": "box-2",
-        "label": "Action to perform on the original two SQL database queries",
-        "options": [
-          "Delete the queries",
-          "Disable including the query in report refresh",
-          "Disable loading the query to the data model",
-          "Duplicate the queries"
-        ],
-        "correctAnswer": "Disable loading the query to the data model"
+        "id": "item-2",
+        "text": "From powerbi.com, import Excel1 as a dataset."
+      },
+      {
+        "id": "item-3",
+        "text": "From powerbi.com, add a tile for the Excel1 dataset to DashboardA."
+      },
+      {
+        "id": "item-4",
+        "text": "From Excel, create a named range by using the data in Excel1."
+      },
+      {
+        "id": "item-5",
+        "text": "From powerbi.com, upload Excel1."
+      }
+    ],
+    "dropZones": [
+      {
+        "id": "zone-1",
+        "label": "Step 1",
+        "correctItemId": "item-1"
+      },
+      {
+        "id": "zone-2",
+        "label": "Step 2",
+        "correctItemId": "item-2"
+      },
+      {
+        "id": "zone-3",
+        "label": "Step 3",
+        "correctItemId": "item-3"
       }
     ]
   },
-  "13": {
-    "dropdowns": [
+  "202": {
+    "type": "ordering",
+    "dragItems": [
       {
-        "id": "box-1",
-        "label": "How should you combine the queries?",
-        "options": [
-          "Append",
-          "Merge",
-          "Transpose"
-        ],
-        "correctAnswer": "Merge"
+        "id": "item-1",
+        "text": "Add and configure a new rule for each value range."
       },
       {
-        "id": "box-2",
-        "label": "What should you do on the Categories query?",
-        "options": [
-          "Delete the query.",
-          "Disable the query load.",
-          "Exclude the query from report refresh."
-        ],
-        "correctAnswer": "Disable the query load."
+        "id": "item-2",
+        "text": "Set Format style to Rules."
+      },
+      {
+        "id": "item-3",
+        "text": "Open the Background color dialog for the Revenue column."
+      },
+      {
+        "id": "item-4",
+        "text": "Open the Font color dialog for the Revenue column."
+      }
+    ],
+    "dropZones": [
+      {
+        "id": "zone-1",
+        "label": "Step 1",
+        "correctItemId": "item-3"
+      },
+      {
+        "id": "zone-2",
+        "label": "Step 2",
+        "correctItemId": "item-2"
+      },
+      {
+        "id": "zone-3",
+        "label": "Step 3",
+        "correctItemId": "item-1"
       }
     ]
   },
-  "20": {
+  "235": {
+    "type": "dropdown",
     "dropdowns": [
       {
         "id": "box-1",
-        "label": "The default timeout for the connection from Power BI Desktop to the database will be",
-        "options": [
-          "unlimited",
-          "one minute",
-          "10 minutes"
-        ],
-        "correctAnswer": "10 minutes"
+        "label": "Values that occur only once in Resource Location",
+        "options": ["0", "13", "2,863"],
+        "correctAnswer": "0"
       },
       {
         "id": "box-2",
-        "label": "The Navigator will display",
-        "options": [
-          "all the tables",
-          "only tables that contain data",
-          "only tables that contain hierarchies"
-        ],
-        "correctAnswer": "only tables that contain data"
+        "label": "Value that occurs most frequently",
+        "options": ["EU North", "Middle East And Africa", "US East", "ZA North"],
+        "correctAnswer": "US East"
       }
-    ]
+    ],
+    "explanation": "Recovered from the annotated answer area image in the source PDF. Selected values: 0; US East.",
+    "manualReview": false,
+    "manualReviewReasons": []
   },
-  "51": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Changing the [answer choice] setting of the relationships will improve report query performance.",
-        "options": [
-          "Cardinality",
-          "Cross filter direction",
-          "Assume Referential Integrity"
-        ],
-        "correctAnswer": "Cross filter direction"
-      },
-      {
-        "id": "box-2",
-        "label": "The data model is organized into a [answer choice].",
-        "options": [
-          "star schema",
-          "snowflake schema",
-          "denormalized table"
-        ],
-        "correctAnswer": "star schema"
-      }
-    ]
-  },
-  "63": {
+  "288": {
+    "type": "hotspot",
     "dropdowns": [
       {
         "id": "box-1",
         "label": "Box 1",
-        "options": [
-          "Attendance fact",
-          "Class dimension",
-          "Teacher dimension",
-          "Teacher fact"
-        ],
-        "correctAnswer": "Teacher dimension"
+        "options": ["SUM", "COUNTX", "CALCULATE", "CALCULATETABLE"],
+        "correctAnswer": "CALCULATE"
       },
       {
         "id": "box-2",
         "label": "Box 2",
-        "options": [
-          "Attendance fact",
-          "Class dimension",
-          "Teacher dimension",
-          "Teacher fact"
-        ],
-        "correctAnswer": "Class dimension"
-      }
-    ]
-  },
-  "66": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "When UnitsInStock is added to Values, there will be",
-        "options": [
-          "0 rows",
-          "1 row",
-          "51 rows",
-          "75 rows"
-        ],
-        "correctAnswer": "75 rows"
+        "options": ["FILTER", "ALLEXCEPT", "CALCULATE", "DATESBETWEEN"],
+        "correctAnswer": "FILTER"
       },
       {
-        "id": "box-2",
-        "label": "Changing Summarize by will",
+        "id": "box-3",
+        "label": "Late order condition",
         "options": [
-          "maintain",
-          "reduce",
-          "increase"
+          "Orders[Order Date] > Orders[Required Date]",
+          "Orders[Shipped Date] >=Orders[Order Date]",
+          "Orders[Shipped Date] <Orders[Required Date]",
+          "Orders[Shipped Date] >Orders[Required Date]"
         ],
-        "correctAnswer": "reduce"
-      }
-    ]
-  },
-  "126": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "To replace all the implicit DAX measures used in the visual, [answer choice] must be created.",
-        "options": [
-          "one explicit measure",
-          "two explicit measures",
-          "three explicit measures"
-        ],
-        "correctAnswer": "two explicit measures"
-      },
-      {
-        "id": "box-2",
-        "label": "To change how the Product Cost field is aggregated in additional visuals, you must change the [answer choice].",
-        "options": [
-          "data category",
-          "datatype",
-          "DAX expression",
-          "Summarization setting"
-        ],
-        "correctAnswer": "Summarization setting"
-      }
-    ]
-  },
-  "150": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Identifying additional factors that increase attrition can be achieved by",
-        "options": [
-          "turning on Cross-report",
-          "adding more fields to Explain by",
-          "adding more fields to Expand by",
-          "moving fields from Explain by to Expand by"
-        ],
-        "correctAnswer": "adding more fields to Explain by"
-      },
-      {
-        "id": "box-2",
-        "label": "Employee attrition is ... times greater when employees work overtime",
-        "options": [
-          "0.11",
-          ".2",
-          "1",
-          "3"
-        ],
-        "correctAnswer": "3"
-      }
-    ]
-  },
-  "163": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Selecting a quarter on the line chart will [answer choice] the clustered column chart.",
-        "options": [
-          "cross-filter",
-          "cross-highlight",
-          "not affect"
-        ],
-        "correctAnswer": "not affect"
-      },
-      {
-        "id": "box-2",
-        "label": "Selecting a quarter on the line chart will [answer choice] the map.",
-        "options": [
-          "cross-filter",
-          "cross-highlight",
-          "not affect"
-        ],
-        "correctAnswer": "cross-filter"
-      }
-    ]
-  },
-  "170": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Box 1",
-        "options": [
-          "are 20 values that occur",
-          "are 365 values that occur",
-          "are 277, 329 values that occur",
-          "is one value that occurs"
-        ],
-        "correctAnswer": "are 20 values that occur"
-      },
-      {
-        "id": "box-2",
-        "label": "Box 2",
-        "options": [
-          "Ash, Green",
-          "Crabapple, Flowering",
-          "Elm, American",
-          "Spruce, Blue"
-        ],
-        "correctAnswer": "Elm, American"
-      }
-    ]
-  },
-  "173": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Visual type",
-        "options": [
-          "Line",
-          "Pie",
-          "Treemap"
-        ],
-        "correctAnswer": "Line"
-      },
-      {
-        "id": "box-2",
-        "label": "Required configuration",
-        "options": [
-          "Select the Show value as option",
-          "Enable Cross-report drill-through",
-          "Populate the axis with a date field"
-        ],
-        "correctAnswer": "Populate the axis with a date field"
-      }
-    ]
-  },
-  "186": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "The visual type is",
-        "options": [
-          "a line",
-          "a line and clustered column",
-          "an area"
-        ],
-        "correctAnswer": "a line"
-      },
-      {
-        "id": "box-2",
-        "label": "The visual indicators are created by using",
-        "options": [
-          "a custom visual",
-          "a trendline",
-          "anomaly detection",
-          "line chart markers"
-        ],
-        "correctAnswer": "anomaly detection"
-      }
-    ]
-  },
-  "194": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Visualization to use",
-        "options": [
-          "A column chart of Quantity Ordered and Unit Price by year",
-          "A line chart of Quantity Ordered and Unit Price by item",
-          "A scatter plot of Quantity Ordered and Unit Price by item"
-        ],
-        "correctAnswer": "A scatter plot of Quantity Ordered and Unit Price by item"
-      },
-      {
-        "id": "box-2",
-        "label": "Feature to enable",
-        "options": [
-          "Automatically find clusters",
-          "Explain the decrease",
-          "Find where the distribution is different"
-        ],
-        "correctAnswer": "Automatically find clusters"
-      }
-    ]
-  },
-  "262": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Users in the finance group can",
-        "options": [
-          "assign sensitivity labels to",
-          "use Analyze in Excel with",
-          "delete"
-        ],
-        "correctAnswer": "use Analyze in Excel with"
-      },
-      {
-        "id": "box-2",
-        "label": "Users in the corp group can",
-        "options": [
-          "grant the Build permission for",
-          "grant the Read permission for",
-          "remove a table from"
-        ],
-        "correctAnswer": "grant the Build permission for"
-      }
-    ]
-  },
-  "291": {
-    "dropdowns": [
-      {
-        "id": "box-1",
-        "label": "Box 1",
-        "options": [
-          "one-to-one",
-          "one-to-many",
-          "many-to-one",
-          "many-to-many"
-        ],
-        "correctAnswer": "many-to-many"
-      },
-      {
-        "id": "box-2",
-        "label": "Create a one-to-one",
-        "options": [
-          "Orders table",
-          "Suppliers table",
-          "Order Details table",
-          "Customer Details worksheet"
-        ],
-        "correctAnswer": "Customer Details worksheet"
+        "correctAnswer": "Orders[Shipped Date] >Orders[Required Date]"
       }
     ]
   }

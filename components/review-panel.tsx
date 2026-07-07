@@ -4,12 +4,14 @@ interface ReviewPanelProps {
   markedQuestionIds: number[];
   incorrectQuestionIds: number[];
   onJumpToQuestion: (questionId: number) => void;
+  getDisplayLabel?: (questionId: number) => string;
 }
 
 export function ReviewPanel({
   markedQuestionIds,
   incorrectQuestionIds,
   onJumpToQuestion,
+  getDisplayLabel,
 }: ReviewPanelProps) {
   return (
     <aside className="space-y-5 rounded-[1.75rem] border border-white/10 bg-[color:var(--color-panel)] p-5">
@@ -28,7 +30,7 @@ export function ReviewPanel({
                 onClick={() => onJumpToQuestion(questionId)}
                 className="rounded-full border border-amber-400/50 px-3 py-1 text-sm font-semibold text-amber-500"
               >
-                Q{questionId}
+                {getDisplayLabel ? getDisplayLabel(questionId) : `Q${questionId}`}
               </button>
             ))
           )}
@@ -49,7 +51,7 @@ export function ReviewPanel({
                 onClick={() => onJumpToQuestion(questionId)}
                 className="rounded-full border border-rose-400/50 px-3 py-1 text-sm font-semibold text-rose-500"
               >
-                Q{questionId}
+                {getDisplayLabel ? getDisplayLabel(questionId) : `Q${questionId}`}
               </button>
             ))
           )}

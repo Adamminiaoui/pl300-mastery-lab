@@ -85,10 +85,19 @@ export function SessionView({ mode }: SessionViewProps) {
   const practiceCorrect = practiceChecks.filter((item) => item?.correct).length;
   const practiceScorePercent =
     practiceChecks.length === 0 ? 0 : (practiceCorrect / practiceChecks.length) * 100;
+  const useExamNumbering = mode === "exam";
+  const displayQuestionNumber = session.currentIndex + 1;
+  const questionNumberMap = new Map(
+    session.questionIds.map((id, index) => [id, index + 1]),
+  );
 
   if (!question) {
     return null;
   }
+
+  const displayQuestionTitle = useExamNumbering
+    ? `Question ${displayQuestionNumber}`
+    : question.title;
 
   return (
     <div className="grid gap-6 xl:grid-cols-[18rem_minmax(0,1fr)_16rem]">
@@ -96,6 +105,9 @@ export function SessionView({ mode }: SessionViewProps) {
         session={session}
         incorrectIds={incorrectIds}
         onJump={(index) => jumpToQuestion(mode, index)}
+        getDisplayLabel={(targetQuestionId, index) =>
+          useExamNumbering ? String(index + 1) : String(targetQuestionId)
+        }
       />
 
       <div className="space-y-6">
@@ -145,7 +157,9 @@ export function SessionView({ mode }: SessionViewProps) {
               Answered {answeredCount}
             </div>
             <div className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold">
-              Current question #{question.id}
+              {useExamNumbering
+                ? `Current question ${displayQuestionNumber} of ${session.questionIds.length}`
+                : `Current question #${question.id}`}
             </div>
           </div>
         </section>
@@ -155,6 +169,7 @@ export function SessionView({ mode }: SessionViewProps) {
           response={response}
           disabled={session.submitted}
           revealAnswer={revealAnswer}
+          displayTitle={displayQuestionTitle}
           onChange={(nextResponse) => saveResponse(mode, question.id, nextResponse)}
         />
 
@@ -207,6 +222,11 @@ export function SessionView({ mode }: SessionViewProps) {
       <ReviewPanel
         markedQuestionIds={session.markedQuestionIds}
         incorrectQuestionIds={incorrectIds}
+        getDisplayLabel={(targetQuestionId) =>
+          useExamNumbering
+            ? `Q${questionNumberMap.get(targetQuestionId) ?? targetQuestionId}`
+            : `Q${targetQuestionId}`
+        }
         onJumpToQuestion={(targetQuestionId) => {
           const index = session.questionIds.indexOf(targetQuestionId);
           if (index >= 0) {

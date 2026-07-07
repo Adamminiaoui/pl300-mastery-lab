@@ -6,12 +6,14 @@ interface QuestionNavigatorProps {
   session: QuizSession;
   onJump: (index: number) => void;
   incorrectIds?: number[];
+  getDisplayLabel?: (questionId: number, index: number) => string;
 }
 
 export function QuestionNavigator({
   session,
   onJump,
   incorrectIds = [],
+  getDisplayLabel,
 }: QuestionNavigatorProps) {
   const incorrectSet = new Set(incorrectIds);
   const responseIds = new Set(Object.keys(session.responses).map(Number));
@@ -44,7 +46,7 @@ export function QuestionNavigator({
                 isIncorrect ? "border-rose-500/50 text-rose-500" : "",
               ].join(" ")}
             >
-              {questionId}
+              {getDisplayLabel ? getDisplayLabel(questionId, index) : String(questionId)}
               {isMarked ? (
                 <span className="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-amber-400" />
               ) : null}

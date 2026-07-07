@@ -66,12 +66,16 @@ export function ExamSelect({
         aria-controls={listId}
         disabled={disabled}
         onClick={() => setOpen((current) => !current)}
-        className={`flex min-h-13 w-full items-center justify-between rounded-md border px-4 py-2 text-left text-base transition hover:border-[#1c1c1c]/60 disabled:cursor-not-allowed disabled:bg-[#f4f4f4] ${toneClass}`}
+        className={`flex min-h-13 w-full items-start justify-between rounded-md border px-4 py-2 text-left text-base transition hover:border-[#1c1c1c]/60 disabled:cursor-not-allowed disabled:bg-[#f4f4f4] ${toneClass}`}
       >
-        <span className={selected ? "" : "text-[#667085]"}>
+        <span
+          className={`block min-w-0 flex-1 whitespace-normal break-words leading-7 ${
+            selected ? "" : "text-[#667085]"
+          }`}
+        >
           {selected?.label ?? value ?? placeholder}
         </span>
-        <span className="ml-4 text-sm text-current">v</span>
+        <span className="ml-4 mt-1 text-sm text-current">v</span>
       </button>
 
       {open ? (
@@ -89,7 +93,7 @@ export function ExamSelect({
                     onChange(option.value);
                     setOpen(false);
                   }}
-                  className={`block w-full rounded-sm px-3 py-2 text-left text-base text-[#111827] transition hover:bg-[#eef2f7] ${
+                  className={`block w-full rounded-sm px-3 py-2 text-left text-base text-[#111827] transition hover:bg-[#eef2f7] whitespace-normal break-words ${
                     option.value === value ? "bg-[#e5ecf6]" : ""
                   }`}
                 >

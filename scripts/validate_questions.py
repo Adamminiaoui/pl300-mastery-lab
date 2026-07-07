@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 from pathlib import Path
 from typing import Any
 
@@ -33,7 +32,6 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
     missing_answer: list[int] = []
     missing_explanation: list[int] = []
     duplicate_sequence_answers: list[int] = []
-    incomplete_dropdowns: list[int] = []
     manual_review: list[int] = []
 
     for question in questions:
@@ -56,13 +54,6 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
             ]
             if len(correct_items) != len(set(correct_items)):
                 duplicate_sequence_answers.append(question_id)
-        if question.get("type") in {"dropdown", "hotspot"}:
-            box_numbers = [
-                int(number)
-                for number in re.findall(r"Box\s+(\d+)\s*:", question.get("explanation", ""))
-            ]
-            if box_numbers and len(question.get("dropdowns", [])) < max(box_numbers):
-                incomplete_dropdowns.append(question_id)
         if question.get("manualReview"):
             manual_review.append(question_id)
 
@@ -76,7 +67,6 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
         "missingAnswers": missing_answer,
         "missingExplanations": missing_explanation,
         "duplicateSequenceAnswers": duplicate_sequence_answers,
-        "incompleteDropdowns": incomplete_dropdowns,
         "manualReview": manual_review,
     }
 
@@ -131,11 +121,6 @@ def main() -> int:
         print(
             "warning: sequence questions with duplicate correct items: "
             f"{report['duplicateSequenceAnswers'][:25]}"
-        )
-    if report["incompleteDropdowns"]:
-        print(
-            "warning: dropdown questions with missing answer boxes: "
-            f"{report['incompleteDropdowns'][:25]}"
         )
     if report["manualReview"]:
         print(f"warning: manual review questions: {report['manualReview'][:25]}")

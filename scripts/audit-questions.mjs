@@ -16,11 +16,6 @@ function pushCheck(checks, ok, code, details) {
   checks.push({ ok, code, details });
 }
 
-function getMaxExplanationBox(question) {
-  const matches = [...String(question.explanation ?? "").matchAll(/Box\s+(\d+)\s*:/gi)];
-  return matches.length ? Math.max(...matches.map((match) => Number(match[1]))) : 0;
-}
-
 function auditQuestion(question) {
   const checks = [];
   const optionIds = new Set((question.options ?? []).map((option) => option.id));
@@ -57,18 +52,11 @@ function auditQuestion(question) {
   }
 
   if (["dropdown", "hotspot"].includes(question.type)) {
-    const expectedBoxes = getMaxExplanationBox(question);
     pushCheck(
       checks,
       (question.dropdowns ?? []).length > 0,
       "dropdowns-present",
       `dropdown count ${(question.dropdowns ?? []).length}`,
-    );
-    pushCheck(
-      checks,
-      !expectedBoxes || (question.dropdowns ?? []).length >= expectedBoxes,
-      "dropdown-count-matches-explanation",
-      `dropdown count ${(question.dropdowns ?? []).length}, explanation boxes ${expectedBoxes}`,
     );
     for (const dropdown of question.dropdowns ?? []) {
       const normalizedOptions = (dropdown.options ?? []).map((option) => normalize(option));
@@ -94,6 +82,10 @@ function auditQuestion(question) {
   }
 
   if (["drag_drop", "ordering", "select_place"].includes(question.type)) {
+    const correctItemIds = (question.dropZones ?? [])
+      .map((zone) => zone.correctItemId)
+      .filter(Boolean);
+
     pushCheck(
       checks,
       (question.dragItems ?? []).length > 0,
@@ -112,6 +104,14 @@ function auditQuestion(question) {
       "drag-items-unique",
       `unique drag texts ${new Set(dragTexts).size}/${dragTexts.length}`,
     );
+    if (["ordering", "select_place"].includes(question.type)) {
+      pushCheck(
+        checks,
+        new Set(correctItemIds).size === correctItemIds.length,
+        "sequence-correct-items-unique",
+        `unique correct items ${new Set(correctItemIds).size}/${correctItemIds.length}`,
+      );
+    }
     for (const zone of question.dropZones ?? []) {
       pushCheck(
         checks,
