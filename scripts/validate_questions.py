@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +33,7 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
     missing_answer: list[int] = []
     missing_explanation: list[int] = []
     duplicate_sequence_answers: list[int] = []
+    dropdown_box_mismatches: list[int] = []
     manual_review: list[int] = []
 
     for question in questions:
@@ -54,6 +56,20 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
             ]
             if len(correct_items) != len(set(correct_items)):
                 duplicate_sequence_answers.append(question_id)
+        if question.get("type") in {"dropdown", "hotspot"}:
+            combined_text = "\n".join(
+                [
+                    question.get("rawText", ""),
+                    question.get("questionText", ""),
+                    question.get("explanation", ""),
+                ]
+            )
+            box_numbers = [
+                int(match)
+                for match in re.findall(r"Box\s*(\d+)", combined_text, flags=re.IGNORECASE)
+            ]
+            if box_numbers and len(question.get("dropdowns", [])) < max(box_numbers):
+                dropdown_box_mismatches.append(question_id)
         if question.get("manualReview"):
             manual_review.append(question_id)
 
@@ -67,6 +83,7 @@ def validate_questions(questions: list[dict[str, Any]]) -> dict[str, Any]:
         "missingAnswers": missing_answer,
         "missingExplanations": missing_explanation,
         "duplicateSequenceAnswers": duplicate_sequence_answers,
+        "dropdownBoxMismatches": dropdown_box_mismatches,
         "manualReview": manual_review,
     }
 
@@ -121,6 +138,11 @@ def main() -> int:
         print(
             "warning: sequence questions with duplicate correct items: "
             f"{report['duplicateSequenceAnswers'][:25]}"
+        )
+    if report["dropdownBoxMismatches"]:
+        print(
+            "warning: dropdown or hotspot questions with fewer interactive boxes than expected: "
+            f"{report['dropdownBoxMismatches'][:25]}"
         )
     if report["manualReview"]:
         print(f"warning: manual review questions: {report['manualReview'][:25]}")

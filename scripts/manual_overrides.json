@@ -1314,5 +1314,207 @@
         "correctAnswer": "Orders[Shipped Date] >Orders[Required Date]"
       }
     ]
+  },
+  "5": {
+    "type": "hotspot",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Option to use to combine the Customer tables",
+        "options": ["Append Queries", "Append Queries as New", "Merge Queries", "Merge Queries as New"],
+        "correctAnswer": "Append Queries as New"
+      },
+      {
+        "id": "box-2",
+        "label": "Action to perform on the original two SQL database queries",
+        "options": [
+          "Delete the queries",
+          "Disable including the query in report refresh",
+          "Disable loading the query to the data model",
+          "Duplicate the queries"
+        ],
+        "correctAnswer": "Disable loading the query to the data model"
+      }
+    ]
+  },
+  "51": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Changing the [answer choice] setting of the relationships will improve report query performance",
+        "options": ["Cardinality", "Cross filter direction", "Assume Referential Integrity"],
+        "correctAnswer": "Cross filter direction"
+      },
+      {
+        "id": "box-2",
+        "label": "The data model is organized into a [answer choice]",
+        "options": ["star schema", "snowflake schema", "denormalized table"],
+        "correctAnswer": "star schema"
+      }
+    ]
+  },
+  "63": {
+    "type": "hotspot",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Teacher First Name",
+        "options": ["Attendance fact", "Class dimension", "Teacher dimension", "Teacher fact"],
+        "correctAnswer": "Teacher dimension"
+      },
+      {
+        "id": "box-2",
+        "label": "Period Number",
+        "options": ["Attendance fact", "Class dimension", "Teacher dimension", "Teacher fact"],
+        "correctAnswer": "Class dimension"
+      }
+    ]
+  },
+  "66": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Rows in the table visual",
+        "options": ["0 rows", "1 row", "51 rows", "75 rows"],
+        "correctAnswer": "75 rows"
+      },
+      {
+        "id": "box-2",
+        "label": "Changing the Summarize by setting will",
+        "options": ["maintain", "reduce", "increase"],
+        "correctAnswer": "reduce"
+      }
+    ]
+  },
+  "150": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Identifying additional factors that increase attrition can be achieved by",
+        "options": [
+          "turning on Cross-report",
+          "adding more fields to Explain by",
+          "adding more fields to Expand by",
+          "moving fields from Explain by to Expand by"
+        ],
+        "correctAnswer": "adding more fields to Explain by"
+      },
+      {
+        "id": "box-2",
+        "label": "Employee attrition factor when employees work overtime",
+        "options": ["0.11", "0.2", "1", "3"],
+        "correctAnswer": "3"
+      }
+    ]
+  },
+  "170": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "There",
+        "options": [
+          "are 20 values that occur",
+          "are 365 values that occur",
+          "are 277,329 values that occur",
+          "is one value that occurs"
+        ],
+        "correctAnswer": "are 20 values that occur"
+      },
+      {
+        "id": "box-2",
+        "label": "The Pear, Flowering species is found more often in column1 than the",
+        "options": ["Ash, Green", "Crabapple, Flowering", "Elm, American", "Spruce, Blue"],
+        "correctAnswer": "Elm, American"
+      }
+    ]
+  },
+  "186": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "The visual type is",
+        "options": ["a line", "a line and clustered column", "an area"],
+        "correctAnswer": "a line"
+      },
+      {
+        "id": "box-2",
+        "label": "The visual indicators that show values out of range are created by using",
+        "options": ["a custom visual", "a trendline", "anomaly detection", "line chart markers"],
+        "correctAnswer": "anomaly detection"
+      }
+    ]
+  },
+  "194": {
+    "type": "hotspot",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Visualization",
+        "options": [
+          "A column chart of Quantity Ordered and Unit Price by year",
+          "A line chart of Quantity Ordered and Unit Price by item",
+          "A scatter plot of Quantity Ordered and Unit Price by item"
+        ],
+        "correctAnswer": "A scatter plot of Quantity Ordered and Unit Price by item"
+      },
+      {
+        "id": "box-2",
+        "label": "Feature",
+        "options": [
+          "Automatically find clusters",
+          "Explain the decrease",
+          "Find where the distribution is different"
+        ],
+        "correctAnswer": "Automatically find clusters"
+      }
+    ]
+  },
+  "262": {
+    "type": "dropdown",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Users in the finance group can",
+        "options": ["assign sensitivity labels to", "use Analyze in Excel with", "delete"],
+        "correctAnswer": "use Analyze in Excel with"
+      },
+      {
+        "id": "box-2",
+        "label": "Users in the corp group can",
+        "options": [
+          "grant the Build permission for",
+          "grant the Read permission for",
+          "remove a table from"
+        ],
+        "correctAnswer": "grant the Build permission for"
+      }
+    ]
+  },
+  "291": {
+    "type": "hotspot",
+    "dropdowns": [
+      {
+        "id": "box-1",
+        "label": "Relationship cardinality",
+        "options": ["one-to-one", "one-to-many", "many-to-one", "many-to-many"],
+        "correctAnswer": "many-to-many"
+      },
+      {
+        "id": "box-2",
+        "label": "Create the many-to-many relationship with",
+        "options": [
+          "Orders table",
+          "Suppliers table",
+          "Order Details table",
+          "Customer Details worksheet"
+        ],
+        "correctAnswer": "Customer Details worksheet"
+      }
+    ]
   }
 }
